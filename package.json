@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier:format": "prettier --write \"**/*.{ts, tsx, js, md, mdx, css, yaml}\"",
-    "prettier:check": "prettier --check \"**/*.{ts, tsx, js, md, mdx, css, yaml}\""
+    "prettier:format": "prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
   "dependencies": {
     "next": "14.2.11",
