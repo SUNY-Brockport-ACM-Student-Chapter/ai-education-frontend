@@ -1,0 +1,8 @@
+next-env.d.ts
+.next
+.vercel
+pnpm-lock.yaml
+.eslintrc.json
+.vscode
+.content-collections
+.gitignore
