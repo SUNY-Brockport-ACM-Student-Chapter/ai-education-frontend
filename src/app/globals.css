@@ -25,7 +25,7 @@ body {
 
 body {
   display: flex;
-  background-color: var(--bport-gold);
+  background-color: var(--background-color);
   font-family: "Inter", sans-serif;
   overflow: hidden;
 }
@@ -228,7 +228,7 @@ i {
 
 /* Main workspace styling */
 .main-workspace {
-  width: calc(100% - 50px);
+  width: 100%;
   padding: 25px;
   box-shadow: 0 15px 15px -15px var(--shadow-color) inset;
   overflow-y: scroll;

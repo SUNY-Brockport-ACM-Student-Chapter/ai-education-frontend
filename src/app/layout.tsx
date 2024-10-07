@@ -3,55 +3,40 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import dynamic from 'next/dynamic';
+import Header from './components/Header';
+import { generateInitials } from './utils/utilities';
+import { ReactNode } from 'react';
 
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Edu AI',
+  title: 'EduAlly',
   description: 'AI-powered education assistant',
 };
 
-// Separate the client-side logic into a new component
-import dynamic from 'next/dynamic';
-const NavMenu = dynamic(() => import('./NavMenu'), { ssr: false });
+const NavMenu = dynamic(() => import('./components/NavMenu'), { ssr: false });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
-  const PageTitle = "Page Title";
   const ProfName = "Professor Name";
-  
-  const generateInitials = (name: string) => {
-    const nameParts = name.trim().split(" ");
-    const initials = nameParts.length >= 2
-      ? nameParts[0][0] + nameParts[1][0]
-      : nameParts[0][0];
-    return initials.toUpperCase();
-  };
-  
-  const AB = generateInitials(ProfName);
+  const userInitials = generateInitials(ProfName);
+
+  // not working yet? wont pick up pagetitle from child/page
+  const childComponent = children as any;
+  const pageTitle = childComponent.type?.pageTitle || "Page Title";
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavMenu ProfName={ProfName} AB={AB} />
+        <NavMenu userName={ProfName} userInitials={userInitials} />
         <main className="main-content">
-          <header className="main-header">
-            <div className="header-section">
-              <h1>{PageTitle}</h1>
-            </div>
-            <div className="profile-section">
-              <div className="profile-icon">{AB}</div>
-              <div className="profile-text">
-                <p>Welcome,</p>
-                <p>{ProfName}</p>
-              </div>
-            </div>
-          </header>
+          <Header pageTitle={pageTitle} userName={ProfName} userInitials={userInitials} />
           <div className="main-workspace">
             {children}
           </div>

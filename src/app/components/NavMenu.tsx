@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import './globals.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import ProfileIcon from './ProfileIcon';
 
 interface NavMenuProps {
-  ProfName: string;
-  AB: string;
+  userName: string;
+  userInitials: string;
 }
 
-export default function NavMenu({ ProfName, AB }: NavMenuProps) {
+const NavMenu: React.FC<NavMenuProps> = ({ userName, userInitials }) => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -30,7 +30,7 @@ export default function NavMenu({ ProfName, AB }: NavMenuProps) {
   return (
     <nav className="sidebar-nav">
       <div className="logo-section">
-        <div className="mobile-profile-icon">{AB}</div>
+        <ProfileIcon initials={userInitials} className="mobile-profile-icon" />
         <h1>EduAlly</h1>
         <label className="burger-bar-dropdown">
           <input 
@@ -51,4 +51,6 @@ export default function NavMenu({ ProfName, AB }: NavMenuProps) {
       </div>
     </nav>
   );
-}
+};
+
+export default NavMenu;
