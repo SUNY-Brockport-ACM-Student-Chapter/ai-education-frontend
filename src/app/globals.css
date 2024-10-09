@@ -1,6 +1,6 @@
 /* Import fonts and icons */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('@fortawesome/fontawesome-free/css/all.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("@fortawesome/fontawesome-free/css/all.min.css");
 
 /* Root variables for colors, shadows, and font size */
 :root {
@@ -300,7 +300,9 @@ i {
     z-index: 10;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
     border-radius: 15px;
     text-align: right;
     margin: 55px 5px;
