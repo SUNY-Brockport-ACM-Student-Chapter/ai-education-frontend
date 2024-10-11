@@ -13,7 +13,7 @@
   --tint-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.25);
   --text-shadow-color: rgba(0, 0, 0, 0.5);
-  font-size: 20px;
+  font-size: 12px;
 }
 
 /* Reset margins and padding for body */
