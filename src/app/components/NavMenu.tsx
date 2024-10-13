@@ -1,25 +1,19 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import ProfileIcon from './ProfileIcon';
+import { useUser } from '../utils/UserContext';
 
-interface NavMenuProps {
-  userName: string;
-  userInitials: string;
-}
-
-const NavMenu: React.FC<NavMenuProps> = ({ userName, userInitials }) => {
+const NavMenu: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { userInitials } = useUser();
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 680);
     };
-
     checkMobile();
     window.addEventListener("resize", checkMobile);
-
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 

@@ -1,11 +1,20 @@
+import React from 'react';
 import styles from "./page.module.css";
+import Header from './components/Header';
 
-export default function Page() {
+const Page: React.FC = () => {
+  const pageTitle = "Add Page Title";
+  /* Set page title here, displayed in Header */
+
   return (
-    <div className={styles.container}>
-      <p>Landing page</p>
+    <div className={styles.Container}>
+      <Header pageTitle={pageTitle} />
+      <div className="main-workspace">
+        {/* Add your content within the main-workspace div */}
+      </div>
     </div>
   );
-}
+};
 
-Page.pageTitle = "Default Page";
+export default Page;
+

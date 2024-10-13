@@ -1,13 +1,16 @@
+'use client';
+
 import React from 'react';
 import ProfileIcon from './ProfileIcon';
+import { useUser } from '../utils/UserContext';
 
 interface HeaderProps {
   pageTitle: string;
-  userName: string;
-  userInitials: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ pageTitle, userName, userInitials }) => {
+const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
+  const { userName, userInitials } = useUser();
+
   return (
     <header className="main-header">
       <div className="header-section">

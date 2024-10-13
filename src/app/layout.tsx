@@ -1,12 +1,10 @@
+import React from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import dynamic from 'next/dynamic';
-import Header from './components/Header';
-import { generateInitials } from './utils/utilities';
-import { ReactNode } from 'react';
 
 config.autoAddCss = false;
 
@@ -18,29 +16,30 @@ export const metadata: Metadata = {
 };
 
 const NavMenu = dynamic(() => import('./components/NavMenu'), { ssr: false });
+const UserProviderClient = dynamic(() => import('./utils/UserContext').then(mod => mod.UserProvider), { ssr: false });
 
-export default function RootLayout({
+async function fetchUserName() {
+  // Replace this with the actual database query
+  // This is the users' first and last name
+  return "professor Name";
+}
+
+export default async function RootLayout({
   children,
 }: {
-  children: ReactNode
+  children: React.ReactNode
 }) {
-  const ProfName = "Professor Name";
-  const userInitials = generateInitials(ProfName);
-
-  // not working yet? wont pick up pagetitle from child/page
-  const childComponent = children as any;
-  const pageTitle = childComponent.type?.pageTitle || "Page Title";
+  const userName = await fetchUserName();
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavMenu userName={ProfName} userInitials={userInitials} />
-        <main className="main-content">
-          <Header pageTitle={pageTitle} userName={ProfName} userInitials={userInitials} />
-          <div className="main-workspace">
+        <UserProviderClient userName={userName}>
+          <NavMenu />
+          <main className="main-content">
             {children}
-          </div>
-        </main>
+          </main>
+        </UserProviderClient>
       </body>
     </html>
   );
