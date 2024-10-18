@@ -1,12 +1,20 @@
+import React from 'react';
 import styles from "./page.module.css";
+import Header from './components/Header';
 
-export default function Page() {
-  const PageTitle = "Default"; // Set your PageTitle here
+const Page: React.FC = () => {
+  const pageTitle = "Add Page Title";
+  /* Set page title here, displayed in Header */
 
   return (
-    <>
-      {/* Add your HTML page content here, and delete these two comment lines. Be sure to set your PageTitle!
-      Any page-specific CSS should go into page.module.css, and remember Typescript uses "className=" instead of "class=" */}
-    </>
+    <div className={styles.Container}>
+      <Header pageTitle={pageTitle} />
+      <div className="main-workspace">
+        {/* Add your content within the main-workspace div */}
+      </div>
+    </div>
   );
-}
+};
+
+export default Page;
+

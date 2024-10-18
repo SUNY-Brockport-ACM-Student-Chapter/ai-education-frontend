@@ -1,53 +1,45 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
+import React from 'react';
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import dynamic from 'next/dynamic';
 
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Edu AI",
-  description: "AI-powered education assistant",
+  title: 'EduAlly',
+  description: 'AI-powered education assistant',
 };
 
-// Separate the client-side logic into a new component
-import dynamic from "next/dynamic";
-const NavMenu = dynamic(() => import("./NavMenu"), { ssr: false });
+const NavMenu = dynamic(() => import('./components/NavMenu'), { ssr: false });
+const UserProviderClient = dynamic(() => import('./utils/UserContext').then(mod => mod.UserProvider), { ssr: false });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const PageTitle = "Page Title";
-  const ProfName = "Professor Name";
+async function fetchUserName() {
+  // Replace this with the actual database query
+  // This is the users' first and last name
+  return "professor Name";
+}
 
-  const generateInitials = (name: string) => {
-    const nameParts = name.trim().split(" ");
-    const initials = nameParts.length >= 2 ? nameParts[0][0] + nameParts[1][0] : nameParts[0][0];
-    return initials.toUpperCase();
-  };
-
-  const AB = generateInitials(ProfName);
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const userName = await fetchUserName();
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavMenu ProfName={ProfName} AB={AB} />
-        <main className="main-content">
-          <header className="main-header">
-            <div className="header-section">
-              <h1>{PageTitle}</h1>
-            </div>
-            <div className="profile-section">
-              <div className="profile-icon">{AB}</div>
-              <div className="profile-text">
-                <p>Welcome,</p>
-                <p>{ProfName}</p>
-              </div>
-            </div>
-          </header>
-          <div className="main-workspace">{children}</div>
-        </main>
+        <UserProviderClient userName={userName}>
+          <NavMenu />
+          <main className="main-content">
+            {children}
+          </main>
+        </UserProviderClient>
       </body>
     </html>
   );

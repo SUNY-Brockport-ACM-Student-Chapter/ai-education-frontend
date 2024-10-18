@@ -1,25 +1,19 @@
-"use client";
+'use client';
+import React, { useState, useEffect } from 'react';
+import ProfileIcon from './ProfileIcon';
+import { useUser } from '../utils/UserContext';
 
-import "./globals.css";
-import { useState, useEffect } from "react";
-
-interface NavMenuProps {
-  ProfName: string;
-  AB: string;
-}
-
-export default function NavMenu({ ProfName, AB }: NavMenuProps) {
+const NavMenu: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { userInitials } = useUser();
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 680);
     };
-
     checkMobile();
     window.addEventListener("resize", checkMobile);
-
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
@@ -30,7 +24,7 @@ export default function NavMenu({ ProfName, AB }: NavMenuProps) {
   return (
     <nav className="sidebar-nav">
       <div className="logo-section">
-        <div className="mobile-profile-icon">{AB}</div>
+        <ProfileIcon initials={userInitials} className="mobile-profile-icon" />
         <h1>EduAlly</h1>
         <label className="burger-bar-dropdown">
           <input type="checkbox" checked={menuVisible} onChange={toggleMenu} />
@@ -55,4 +49,6 @@ export default function NavMenu({ ProfName, AB }: NavMenuProps) {
       </div>
     </nav>
   );
-}
+};
+
+export default NavMenu;
