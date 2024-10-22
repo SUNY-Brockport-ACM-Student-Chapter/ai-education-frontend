@@ -48,6 +48,25 @@ const QuestionList = () => {
         <div className="qcard">13
           <div className="qcardCompletionbox">{qcardCompletionF}</div>
         </div>
+        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>        <div className="qcard">13
+          <div className="qcardCompletionbox">{qcardCompletionF}</div>
+        </div>
       </div>
       <div className="qlist-progressbar"/>
       <h3>4/13 Complete</h3>
