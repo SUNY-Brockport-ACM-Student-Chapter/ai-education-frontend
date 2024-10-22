@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import ProfileIcon from './ProfileIcon';
 import { useUser } from '../utils/UserContext';
+import './component-style.css';
 
 const NavMenu: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);

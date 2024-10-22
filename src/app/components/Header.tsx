@@ -3,6 +3,7 @@
 import React from 'react';
 import ProfileIcon from './ProfileIcon';
 import { useUser } from '../utils/UserContext';
+import './component-style.css';
 
 interface HeaderProps {
   pageTitle: string;

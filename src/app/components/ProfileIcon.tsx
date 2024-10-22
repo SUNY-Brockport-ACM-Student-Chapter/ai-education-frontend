@@ -1,4 +1,5 @@
 import React from 'react';
+import './component-style.css';
 
 interface ProfileIconProps {
   initials: string;
