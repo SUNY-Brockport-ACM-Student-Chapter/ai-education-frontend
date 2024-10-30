@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from "../page.module.css";
+import styles from "./page.module.css";
 import Header from '../../../components/Header';
 
 const Page: React.FC = () => {
-  const pageTitle = "Modify Course";
+  const pageTitle = "Manage Enrollment";
   /* Set page title here, displayed in Header */
 
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import styles from "../../page.module.css";
+import styles from "./page.module.css";
 import Header from '../../components/Header';
 
 const Page: React.FC = () => {
