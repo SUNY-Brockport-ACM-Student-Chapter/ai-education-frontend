@@ -6,7 +6,7 @@ import QuestionList from './components/QuestionList';
 import ExamPageInfoBox from './components/ExamPageInfoBox';
 
 const Page: React.FC = () => {
-  const pageTitle = "this is the page now";
+  const pageTitle = "Okay, great. Alright.";
   /* Set page title here, displayed in Header */
 
   return (
