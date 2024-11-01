@@ -123,6 +123,26 @@
   justify-self: flex-end;
 }
 
+.exampage-infobox{
+  margin: auto;
+  width: 20%;
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+.exampage-infobox-desc{
+  border: solid, 2px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 150;
+  overflow-y: scroll;
+}
+.exampage-infobox-dates{
+  color: grey;
+  line-height: 8px;
+}
+
 /** NavMenu **/
 .sidebar-nav {
   display: flex;
