@@ -1,20 +1,18 @@
 import React from 'react';
 import styles from "./page.module.css";
-import Header from './components/Header';
-import PrevNext from './components/PrevNext';
-import QuestionList from './components/QuestionList';
+import Header from '../../../components/Header';
 
 const Page: React.FC = () => {
-  const pageTitle = "this is the page now";
+  const pageTitle = "Create Course";
   /* Set page title here, displayed in Header */
 
   return (
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
+        
         {/* Add your content within the main-workspace div */}
-        <QuestionList />
-        <PrevNext />
+
       </div>
     </div>
   );
