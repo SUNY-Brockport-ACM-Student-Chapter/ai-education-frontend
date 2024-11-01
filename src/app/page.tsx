@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Header from './components/Header';
 import PrevNext from './components/PrevNext';
 import QuestionList from './components/QuestionList';
-import ExamPageInofBox from './components/ExamPageInfoBox';
+import ExamPageInfoBox from './components/ExamPageInfoBox';
 
 const Page: React.FC = () => {
   const pageTitle = "this is the page now";
@@ -14,8 +14,9 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
-        
-        <ExamPageInofBox />
+        <QuestionList />
+        <PrevNext />
+        <ExamPageInfoBox examNum={2} courseName='CSS 101' examDesc='Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.' startDate='10/2/32' endDate='10/9/32' />
       </div>
     </div>
   );

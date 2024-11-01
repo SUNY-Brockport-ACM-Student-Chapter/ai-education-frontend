@@ -1,21 +1,29 @@
 import React from 'react';
 import './component-style.css';
 
-const ExamPageInofBox = () => {
+interface ExamPageProps{
+    examNum: number;
+    courseName: string;
+    examDesc: string;
+    startDate: string;
+    endDate: string;
+}
+
+const ExamPageInfoBox: React.FC<ExamPageProps> = ({examNum, courseName, examDesc, startDate, endDate}) => {
     return (
         <div className="exampage-infobox">
-            <h1>Exam #</h1>
-            <h3>Course Name</h3>
+            <h1>Exam {examNum}</h1>
+            <h3>{courseName}</h3>
             <div className="exampage-infobox-desc">
-                <p>Exam Description...</p>
+                <p>{examDesc}</p>
             </div>
             <div className="exampage-infobox-dates">
-                <p>Start date: ...</p>
-                <p>End date: ...</p>
+                <p>Start date: {startDate}</p>
+                <p>End date: {endDate}</p>
             </div>
         </div>
     );
        
 };
 
-export default ExamPageInofBox;
+export default ExamPageInfoBox;
