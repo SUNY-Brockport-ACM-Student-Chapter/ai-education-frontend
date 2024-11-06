@@ -502,3 +502,25 @@
 .student-course-home-body .course-info {
   flex-grow: 1;
 }
+
+/* FOR EXAM SLIDERS */
+.exam-slide {
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.exam-slide p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.exam-slide-box {
+  overflow-y: scroll;
+  height: 400px;
+}
