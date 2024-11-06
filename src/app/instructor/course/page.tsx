@@ -10,8 +10,6 @@ const Page: React.FC = () => {
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
-        {/* Add your content within the main-workspace div */}
-        
       </div>
     </div>
   );

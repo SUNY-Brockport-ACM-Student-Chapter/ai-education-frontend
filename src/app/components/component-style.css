@@ -443,3 +443,62 @@
     display: none;
   }
 }
+
+.student-course-nav-bar {
+  background-color: var(--bport-green);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+}
+
+.student-course-nav-bar button {
+  color: white;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+   font-family: "Inter", sans-serif;
+   font-size: 1.5rem;
+   padding-inline: 20px;
+   height: 100%;
+   width: auto;
+}
+
+.student-course-nav-bar .not-selected {
+   background-color: var(--bport-green);
+   transition: 0.5s;
+}
+
+.student-course-nav-bar .selected {
+  background-color: var(--shadow-color);
+  transition: 0.5s;
+}
+
+.student-course-nav-bar div p {
+ margin-block: 0.5em;
+}
+
+.student-course-nav-bar-kid {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+/* Student Course Home */
+.student-course-home-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.student-course-home-body .upcoming-exams {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.student-course-home-body .course-info {
+  flex-grow: 1;
+}
