@@ -127,22 +127,74 @@
 .exampage-infobox{
   margin: auto;
   width: 30%;
-  padding: 50px;
+  padding: 10px;
   text-align: center;
   border-radius: 10px;
 }
 
+.exampage-infobox h4{
+  color: grey;
+  font-size: 18px;
+}
+
 .exampage-infobox-desc{
   border: solid, 2px;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 10px;
   margin-top: 10px;
   max-height: 150px;
   overflow-y: scroll;
+  box-shadow: 0 5px 0px var(--shadow-color);
 }
+
 .exampage-infobox-dates{
   color: grey;
   line-height: 8px;
+}
+
+/** Exam Page Buttons **/
+.exam-buttonbox{
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.exam-buttonbox button{
+  margin: auto;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  color: white;
+  background-color: var(--bport-green);
+  height: 60px;
+  border-radius: 15px;
+  border: 0;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exam-buttonbox button:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  transition: 0.25s;
+}
+
+.exam-buttonbox button.ai-review{
+  background-color: var(--bport-secondary-gold);
+}
+
+.exam-buttonbox button:active{
+  background-color: var(--bport-gold);
+}
+
+.exam-buttonbox button.hide{
+  display: none;
 }
 
 /** NavMenu **/

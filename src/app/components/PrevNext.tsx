@@ -4,19 +4,18 @@ import './component-style.css';
 const PrevNext = () => {
   return (
     <div className="prevnext-buttonbox">
-    <button className='previous'>
-      <p>❮ Prev</p>
-    </button>
-    <button className='next button-hide'>
-      <p>Next ❯</p>
-    </button>
-    <button className='finish button-hide'>
-      <p>Finish</p>
-    </button>
-
-    <button className='end-review'>
-      <p>End Review</p>
-    </button>
+      <button className='previous'>
+        <p>❮ Prev</p>
+      </button>
+      <button className='next button-hide'>
+        <p>Next ❯</p>
+      </button>
+      <button className='finish button-hide'>
+        <p>Finish</p>
+      </button>
+      <button className='end-review'>
+        <p>End Review</p>
+      </button>
     </div>
   );
 };

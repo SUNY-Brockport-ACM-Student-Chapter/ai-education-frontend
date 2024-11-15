@@ -7,9 +7,10 @@ interface ExamPageProps{
     examDesc: string;
     startDate: string;
     endDate: string;
+    attemptNum: number;
 }
 
-const ExamPageInfoBox: React.FC<ExamPageProps> = ({examNum, courseName, examDesc, startDate, endDate}) => {
+const ExamPageInfoBox: React.FC<ExamPageProps> = ({examNum, courseName, examDesc, startDate, endDate, attemptNum}) => {
     return (
         <div className="exampage-infobox">
             <h1>Exam {examNum}</h1>
@@ -21,6 +22,7 @@ const ExamPageInfoBox: React.FC<ExamPageProps> = ({examNum, courseName, examDesc
                 <p>Start date: {startDate}</p>
                 <p>End date: {endDate}</p>
             </div>
+            <h4>Attempt: {attemptNum}</h4>
         </div>
     );
        
