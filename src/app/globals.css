@@ -9,7 +9,9 @@
   --bport-secondary-green1: rgb(120, 157, 74);
   --bport-secondary-green2: rgb(87, 121, 53);
   --bport-secondary-gold: rgb(255, 164, 0);
-  --background-color: rgb(235, 235, 235);
+  --bport-secondary-gold: rgb(255, 164, 0);
+  --edually-red: rgb(238, 50, 60);
+  --panel-color: rgb(200, 200, 200);
   --tint-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.25);
   --text-shadow-color: rgba(0, 0, 0, 0.5);
@@ -75,4 +77,13 @@ i {
   min-height: calc(100vh - 150px);
   max-height: calc(100vh - 160px);
   flex-grow: 1;
+  display: flex;
+}
+
+.menu-panel {
+  background-color: var(--panel-color);
+  padding: 25px;
+  box-shadow: 0 5px 5px var(--shadow-color);
+  border-radius: 15px;
+  margin: 15px;
 }
