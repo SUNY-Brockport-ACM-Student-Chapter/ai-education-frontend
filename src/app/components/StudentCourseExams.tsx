@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import './component-style.css';
+import Link from 'next/link';
 
 const StudentCourseExams = () => {
 
@@ -11,7 +12,9 @@ const StudentCourseExams = () => {
     </div>
       <div className="menu-panel course-info">
         <h3>Course Information</h3><br />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic ad, obcaecati nobis eius voluptatum ducimus laboriosam. Quam commodi nostrum voluptatibus perferendis cupiditate tempora illo iusto modi assumenda. Laborum, corporis.</p>
+        <Link href="./exam/attempt_1">Attempt 1</Link>
+        <Link href="./exam/attempt_2">Attempt 2</Link>
+        <Link href="./exam/ai_review">AI Review</Link>
       </div>
     </div>
 

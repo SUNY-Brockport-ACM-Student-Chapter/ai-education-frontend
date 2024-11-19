@@ -1,6 +1,4 @@
-/** CSS for specific components **/
-
-/** PrevNext **/
+/** Base Components **/
 .prevnext-buttonbox {
   width: 300px;
   height: 150px;
@@ -51,7 +49,7 @@
   display: none;
 }
 
-/** QuestionList **/
+/** Question Components **/
 .question-list-box {
   width: 250px;
   height: 500px;
@@ -123,7 +121,7 @@
   justify-self: flex-end;
 }
 
-/** NavMenu **/
+/** Navigation **/
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -131,6 +129,12 @@
   height: 100vh;
   background-color: var(--bport-green);
   color: white;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
 }
 
 .sidebar-nav .logo-section {
@@ -141,6 +145,10 @@
   background-color: var(--tint-color);
   border-radius: 5px;
   box-shadow: 0px 5px 7px var(--shadow-color);
+}
+
+.sidebar-nav .logo-section a {
+  display: inline;
 }
 
 .sidebar-nav .menu-section {
@@ -224,6 +232,144 @@
   width: auto;
 }
 
+/** Header **/
+.main-header {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header .header-section {
+  width: auto;
+  text-wrap: nowrap;
+  margin: 25px;
+}
+
+.main-header .profile-icon {
+  align-content: center;
+  background-color: var(--bport-secondary-green1);
+  border-radius: 100px;
+  padding: 5px;
+  width: 70px;
+  height: 70px;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  transition: 0.5s;
+  scale: 80%;
+}
+
+.main-header .profile-icon:hover {
+  border-radius: 5px;
+  transition: 0.5s;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px var(--text-shadow-color);
+  cursor: pointer;
+}
+
+.main-header .profile-text {
+  justify-self: flex-end;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 0.5rem;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.main-header .profile-section {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  transition: 0.25s;
+}
+
+/** Student Course Components **/
+.student-course-nav-bar {
+  background-color: var(--bport-green);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+}
+
+.student-course-nav-bar button {
+  color: white;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  padding-inline: 20px;
+  height: 100%;
+  width: auto;
+}
+
+.student-course-nav-bar .not-selected {
+  background-color: var(--bport-green);
+  transition: 0.5s;
+}
+
+.student-course-nav-bar .selected {
+  background-color: var(--shadow-color);
+  transition: 0.5s;
+}
+
+.student-course-nav-bar div p {
+  margin-block: 0.5em;
+}
+
+.student-course-nav-bar-kid {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.student-course-home-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.student-course-home-body .upcoming-exams {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.student-course-home-body .course-info {
+  flex-grow: 1;
+}
+
+/** Exam Components **/
+.exam-slide {
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.exam-slide p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.exam-slide-box {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+/** Media Queries **/
 @media screen and (max-width: 1505px) {
   .profile-text {
     display: none;
@@ -328,21 +474,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    cursor: pointer;
-    color: white;
   }
 
   .burger-bar-dropdown input[type="checkbox"] {
     display: none;
-  }
-
-  .burger-bar-dropdown i {
-    font-size: 2.25rem;
-    padding-top: 2px;
-    width: auto;
   }
 
   .main-header {
@@ -380,147 +515,4 @@
   .profile-icon {
     display: none;
   }
-}
-
-
-/* Header */
-.main-header {
-  display: flex;
-  width: 100%;
-  height: auto;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-header .header-section {
-  width: auto;
-  text-wrap: nowrap;
-  margin: 25px;
-}
-
-.main-header .profile-icon {
-  align-content: center;
-  background-color: var(--bport-secondary-green1);
-  border-radius: 100px;
-  padding: 5px;
-  width: 70px;
-  height: 70px;
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  transition: 0.5s;
-}
-
-.main-header .profile-icon:hover {
-  border-radius: 5px;
-  transition: 0.5s;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 5px var(--text-shadow-color);
-  cursor: pointer;
-}
-
-.main-header .profile-text {
-  justify-self: flex-end;
-  padding: 0 15px;
-  text-align: center;
-  line-height: 0.5rem;
-  font-weight: 600;
-  transition: 0.25s;
-}
-
-.main-header .profile-section {
-  justify-self: flex-end;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 15px;
-  transition: 0.25s;
-}
-
-@media screen and (max-width: 1505px) {
-  .profile-text {
-    display: none;
-  }
-}
-
-.student-course-nav-bar {
-  background-color: var(--bport-green);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  height: 50px;
-  width: 100%;
-}
-
-.student-course-nav-bar button {
-  color: white;
-  box-shadow: none;
-  border: none;
-  border-radius: 5px;
-   font-family: "Inter", sans-serif;
-   font-size: 1.5rem;
-   padding-inline: 20px;
-   height: 100%;
-   width: auto;
-}
-
-.student-course-nav-bar .not-selected {
-   background-color: var(--bport-green);
-   transition: 0.5s;
-}
-
-.student-course-nav-bar .selected {
-  background-color: var(--shadow-color);
-  transition: 0.5s;
-}
-
-.student-course-nav-bar div p {
- margin-block: 0.5em;
-}
-
-.student-course-nav-bar-kid {
-  background-color: aquamarine;
-  padding: 10px;
-}
-
-/* Student Course Home */
-.student-course-home-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.student-course-home-body .upcoming-exams {
-  flex-grow: 1;
-  width: 50%;
-}
-
-.student-course-home-body .course-info {
-  flex-grow: 1;
-}
-
-/* FOR EXAM SLIDERS */
-.exam-slide {
-  background-color: white;
-  border-style: solid;
-  border-color: black;
-  border-width: 0.5px;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.exam-slide p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.exam-slide-box {
-  overflow-y: scroll;
-  height: 400px;
 }

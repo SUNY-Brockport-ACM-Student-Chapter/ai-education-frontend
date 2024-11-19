@@ -78,7 +78,6 @@ i {
   max-height: calc(100vh - 160px);
   flex-grow: 1;
   display: flex;
-  justify-content: space-between;
 }
 
 .menu-panel {
