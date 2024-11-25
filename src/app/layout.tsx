@@ -1,3 +1,4 @@
+// app/layout.tsx
 import React from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
@@ -20,8 +21,7 @@ const UserProviderClient = dynamic(() => import('./utils/UserContext').then(mod 
 
 async function fetchUserName() {
   // Replace this with the actual database query
-  // This is the users' first and last name
-  return "professor Name";
+  return "Professor Name";
 }
 
 export default async function RootLayout({

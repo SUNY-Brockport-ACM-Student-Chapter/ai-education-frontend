@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from "./page.module.css";
 import Header from './components/Header';
-import PrevNext from './components/PrevNext';
-import QuestionList from './components/QuestionList';
+import Link from 'next/link';
 
 const Page: React.FC = () => {
   const pageTitle = "this is the page now";
@@ -13,8 +12,9 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
-        <QuestionList />
-        <PrevNext />
+        <Link href="/student/dashboard">Student Dashboard  </Link>
+        
+        <Link href="/instructor/dashboard">Instructor Dashboard</Link>
       </div>
     </div>
   );

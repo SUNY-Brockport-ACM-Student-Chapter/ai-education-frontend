@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from "./page.module.css";
 import Header from '../../components/Header';
+
 import PrevNext from '@/app/components/PrevNext';
 import CourseList from '@/app/components/CourseList';
+import Link from 'next/link';
+
 
 const Page: React.FC = () => {
   const pageTitle = "Dashboard";
@@ -14,6 +17,7 @@ const Page: React.FC = () => {
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
         <CourseList></CourseList>
+        <Link href="./course">Course</Link>
       </div>
     </div>
   );

@@ -78,7 +78,6 @@ i {
   max-height: calc(100vh - 160px);
   flex-grow: 1;
   display: flex;
-  justify-content: space-between;
 }
 
 .menu-panel {
@@ -86,5 +85,5 @@ i {
   padding: 25px;
   box-shadow: 0 5px 5px var(--shadow-color);
   border-radius: 15px;
-  margin-inline: 15px;
+  margin: 15px;
 }
