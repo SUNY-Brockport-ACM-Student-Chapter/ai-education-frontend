@@ -187,6 +187,78 @@
   transition: 0.25s;
 }
 
+/** BlurContainer **/
+.blur-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  filter: blur(5px);
+  z-index: 5; /* Ensure the blur is behind the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thebigbox {
+  z-index: 1;
+}
+
+/** ExamExit **/
+.exam-exit-box {
+  font-size: 1.5rem;
+  font-weight: 600;
+  z-index: 9;
+  width: 500px;
+  height: 325px;
+  padding: 50px;
+  background-color: #E5E5E5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  text-wrap: wrap;
+  box-shadow: 0px 5px 5px var(--shadow-color);
+}
+
+.confirm-cancel-buttons {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.confirm-cancel-buttons button {
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  color: white;
+  width: 40%;
+  border-radius: 15px;
+  border: 0;
+  transition: 0.25s;
+}
+
+.confirm-cancel-buttons button.confirm {
+  background-color: var(--bport-green);
+}
+
+.confirm-cancel-buttons button.cancel {
+  background-color: var(--edually-red);
+}
+
+.confirm-cancel-buttons button:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  transition: 0.25s;
+}
+
 .exam-buttonbox button.ai-review{
   background-color: var(--bport-secondary-gold);
 }
@@ -238,6 +310,110 @@
 }
 
 /** Navigation **/
+=======
+.confirm-cancel-buttons button:active {
+  background-color: var(--bport-secondary-gold);
+}
+
+/* Popup Button for Exam Exit (TEMPORARY) */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popup-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dimmed background */
+  backdrop-filter: blur(5px); /* Blurred effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}  
+
+/** Course List **/
+.exam-list-box {
+  width: 80%;
+  height: 200px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: var(--tint-color);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  box-shadow: 0 5px 10px var(--shadow-color);
+}
+
+.elist-card-box {
+  border: 0px solid var(--shadow-color);
+  border-radius: 15px;
+  flex-wrap: nowrap;
+  padding: 15px;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 80%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.ecard {
+  /*width: 30%;*/
+  flex: 0 0 15%;
+  height: 90px;
+  background-color: white;
+  border-radius: 15px;
+  display: inline-block;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.15s;
+  user-select: none;
+  padding: 10px;
+}
+
+.ecard:hover {
+  box-shadow: 0 5px 0px var(--shadow-color);
+  transform: translateY(-5px);
+  transition: 0.15s;
+}
+
+/** NavMenu **/
 .sidebar-nav {
   display: flex;
   flex-direction: column;
