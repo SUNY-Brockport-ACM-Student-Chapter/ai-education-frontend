@@ -41,6 +41,10 @@
   display: inline-block;
 }
 
+.prevnext-buttonbox button.end-review.button-hide{
+  display: none;
+}
+
 .button-invalid {
   opacity: 25%;
 }
@@ -193,6 +197,41 @@
 
 .exam-buttonbox button.hide{
   display: none;
+}
+
+/** Exam Questions Buttons **/
+.exam-questionbox{
+  font-size: 20px;
+}
+
+.question-textbox textarea{
+  height: 400px;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: start;
+  border: 0.1px solid grey; 
+  resize: none;
+}
+
+.question-textbox textarea:hover{
+  border: 2px solid grey;
+}
+
+/** Feedback **/
+.exam-aifeedback input{
+  accent-color: red;
+}
+
+.feedback-textbox textarea{
+  max-height: 150px;
+  overflow-y: scroll;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: start;
+  border: 0.1px solid grey; 
+  resize: none;
 }
 
 /** Navigation **/

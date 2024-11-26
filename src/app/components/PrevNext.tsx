@@ -10,10 +10,10 @@ const PrevNext = () => {
       <button className='next button-hide'>
         <p>Next ❯</p>
       </button>
-      <button className='finish button-hide'>
+      <button className='finish button'>
         <p>Finish</p>
       </button>
-      <button className='end-review'>
+      <button className='end-review button-hide'>
         <p>End Review</p>
       </button>
     </div>
