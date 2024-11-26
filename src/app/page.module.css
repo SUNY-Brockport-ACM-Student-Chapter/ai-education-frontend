@@ -1,1 +1,18 @@
 /* Add your page-specific css here.*/
+.question_page1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.question_page2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+}

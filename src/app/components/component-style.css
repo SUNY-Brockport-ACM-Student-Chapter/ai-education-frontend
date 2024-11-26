@@ -41,6 +41,10 @@
   display: inline-block;
 }
 
+.prevnext-buttonbox button.end-review.button-hide{
+  display: none;
+}
+
 .button-invalid {
   opacity: 25%;
 }
@@ -121,6 +125,68 @@
   justify-self: flex-end;
 }
 
+/** Exam Page Info Box Styling **/
+.exampage-infobox{
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.exampage-infobox h4{
+  color: grey;
+  font-size: 18px;
+}
+
+.exampage-infobox-desc{
+  border: solid, 2px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 150px;
+  overflow-y: scroll;
+  box-shadow: 0 5px 0px var(--shadow-color);
+}
+
+.exampage-infobox-dates{
+  color: grey;
+  line-height: 8px;
+}
+
+/** Exam Page Buttons **/
+.exam-buttonbox{
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.exam-buttonbox button{
+  margin: auto;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  color: white;
+  background-color: var(--bport-green);
+  height: 60px;
+  border-radius: 15px;
+  border: 0;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exam-buttonbox button:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px var(--shadow-color);
+  transition: 0.25s;
+}
+
 /** BlurContainer **/
 .blur-container {
   position: absolute;
@@ -193,6 +259,58 @@
   transition: 0.25s;
 }
 
+.exam-buttonbox button.ai-review{
+  background-color: var(--bport-secondary-gold);
+}
+
+.exam-buttonbox button:active{
+  background-color: var(--bport-gold);
+}
+
+.exam-buttonbox button.hide{
+  display: none;
+}
+
+/** Exam Questions Buttons **/
+.exam-questionbox{
+  font-size: 20px;
+  width: 600px;
+  padding-right: 100px;
+  margin-right: auto;
+}
+
+.question-textbox textarea{
+  height: 400px;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: start;
+  border: 0.1px solid grey; 
+  resize: none;
+}
+
+.question-textbox textarea:hover{
+  border: 2px solid grey;
+}
+
+/** Feedback **/
+.exam-aifeedback input{
+  accent-color: red;
+}
+
+.feedback-textbox textarea{
+  max-height: 150px;
+  overflow-y: scroll;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: start;
+  border: 0.1px solid grey; 
+  resize: none;
+}
+
+/** Navigation **/
+=======
 .confirm-cancel-buttons button:active {
   background-color: var(--bport-secondary-gold);
 }
