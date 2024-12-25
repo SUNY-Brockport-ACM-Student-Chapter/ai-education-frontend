@@ -18,6 +18,14 @@
   font-size: 15px;
 }
 
+/* Temp */
+.main-workspace a {
+  height: 20px;
+  margin-inline: 5px;
+  padding-inline: 5px;
+  font-weight: 700;
+}
+
 /* Reset margins and padding for body */
 html,
 body {
@@ -78,6 +86,7 @@ i {
   max-height: calc(100vh - 160px);
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
 }
 
 .menu-panel {

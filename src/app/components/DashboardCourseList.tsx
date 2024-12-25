@@ -1,5 +1,5 @@
-import React from 'react';
-import './component-style.css';
+import React from "react";
+import "./component-style.css";
 
 const CourseList = () => {
   return (
@@ -7,36 +7,47 @@ const CourseList = () => {
       <h2>Upcoming Exams</h2>
       <div className="elist-card-box">
         <div className="ecard">
-          <section><h3>Exam Title</h3></section>
+          <section>
+            <h3>Exam Title</h3>
+          </section>
           <section>Couse Title</section>
           <section>due date</section>
         </div>
         <div className="ecard">
-          <section><h3>Exam Title</h3></section>
+          <section>
+            <h3>Exam Title</h3>
+          </section>
           <section>Couse Title</section>
-          <section>due date</section> 
+          <section>due date</section>
         </div>
         <div className="ecard">
-          <section><h3>Exam Title</h3></section>
+          <section>
+            <h3>Exam Title</h3>
+          </section>
           <section>Course Title</section>
           <section>due date</section>
         </div>
         <div className="ecard">
-          <section><h3>Exam Title</h3></section>
+          <section>
+            <h3>Exam Title</h3>
+          </section>
           <section>Course Title</section>
           <section>due date</section>
         </div>
         <div className="ecard">
-          <section><h3>Exam Title</h3></section>
+          <section>
+            <h3>Exam Title</h3>
+          </section>
           <section>Course Title</section>
           <section>due date</section>
         </div>
         <div className="ecard">
-          <section><h3>Exam Title</h3></section>
+          <section>
+            <h3>Exam Title</h3>
+          </section>
           <section>Course Title</section>
           <section>due date</section>
         </div>
-        
       </div>
     </div>
   );

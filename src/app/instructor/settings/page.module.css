@@ -1,100 +1,100 @@
 .settingsBody {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 32px;
 }
 
 .settingsSection {
-    background-color: var(--bport-green);
-    max-height: 2em;
-    flex-grow: 1;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 5px var(--shadow-color);
+  background-color: var(--bport-green);
+  max-height: 2em;
+  flex-grow: 1;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 5px var(--shadow-color);
 }
 
 /* General Settings Styles */
 .settingsGeneral {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .inputGroup {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .inputGroup label {
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding-right: 15px;
-    min-width: 120px;
-    text-align: right;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-right: 15px;
+  min-width: 120px;
+  text-align: right;
 }
 
 .inputGroup input {
-    flex: 1;
-    background-color: var(--tint-color);
-    color: var(--shadow-color);
-    border: none;
-    padding: 8px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    border-radius: 10px;
+  flex: 1;
+  background-color: var(--tint-color);
+  color: var(--shadow-color);
+  border: none;
+  padding: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 10px;
 }
 
 .settingsGeneral input {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 /* Authentication Settings Styles */
 .settingsAuthentication {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .currentPasswordGroup {
-    width: 49.5%;
+  width: 49.5%;
 }
 
 .newPasswordsContainer {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .passwordGroup {
-    width: 50%;
+  width: 50%;
 }
 
 .settingsAuthentication label {
-    display: block;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-    padding-left: 2px;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding-left: 2px;
 }
 
 .settingsAuthentication input {
-    width: 95%;
-    background-color: transparent;
-    border: 3px solid black;
-    padding: 8px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    border-radius: 10px;
+  width: 95%;
+  background-color: transparent;
+  border: 3px solid black;
+  padding: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 10px;
 }
 
 .adminReqBanner {
-    background-color: var(--tint-color);
-    max-height: 2em;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--shadow-color);
-    padding: 15px 30px;
-    border-radius: 15px;
-    margin-top: auto;
+  background-color: var(--tint-color);
+  max-height: 2em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--shadow-color);
+  padding: 15px 30px;
+  border-radius: 15px;
+  margin-top: auto;
 }

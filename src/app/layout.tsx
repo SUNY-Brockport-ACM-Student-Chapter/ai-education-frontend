@@ -1,34 +1,33 @@
 // app/layout.tsx
-import React from 'react';
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import dynamic from 'next/dynamic';
+import React from "react";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import dynamic from "next/dynamic";
 
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'EduAlly',
-  description: 'AI-powered education assistant',
+  title: "EduAlly",
+  description: "AI-powered education assistant",
 };
 
-const NavMenu = dynamic(() => import('./components/NavMenu'), { ssr: false });
-const UserProviderClient = dynamic(() => import('./utils/UserContext').then(mod => mod.UserProvider), { ssr: false });
+const NavMenu = dynamic(() => import("./components/NavMenu"), { ssr: false });
+const UserProviderClient = dynamic(
+  () => import("./utils/UserContext").then((mod) => mod.UserProvider),
+  { ssr: false },
+);
 
 async function fetchUserName() {
   // Replace this with the actual database query
   return "Professor Name";
 }
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const userName = await fetchUserName();
 
   return (
@@ -36,9 +35,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <UserProviderClient userName={userName}>
           <NavMenu />
-          <main className="main-content">
-            {children}
-          </main>
+          <main className="main-content">{children}</main>
         </UserProviderClient>
       </body>
     </html>

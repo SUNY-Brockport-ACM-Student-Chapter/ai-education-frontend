@@ -41,7 +41,7 @@
   display: inline-block;
 }
 
-.prevnext-buttonbox button.end-review.button-hide{
+.prevnext-buttonbox button.end-review.button-hide {
   display: none;
 }
 
@@ -126,7 +126,7 @@
 }
 
 /** Exam Page Info Box Styling **/
-.exampage-infobox{
+.exampage-infobox {
   margin: auto;
   width: 30%;
   padding: 10px;
@@ -134,12 +134,12 @@
   border-radius: 10px;
 }
 
-.exampage-infobox h4{
+.exampage-infobox h4 {
   color: grey;
   font-size: 18px;
 }
 
-.exampage-infobox-desc{
+.exampage-infobox-desc {
   border: solid, 2px;
   border-radius: 20px;
   padding: 10px;
@@ -149,13 +149,13 @@
   box-shadow: 0 5px 0px var(--shadow-color);
 }
 
-.exampage-infobox-dates{
+.exampage-infobox-dates {
   color: grey;
   line-height: 8px;
 }
 
 /** Exam Page Buttons **/
-.exam-buttonbox{
+.exam-buttonbox {
   margin: auto;
   width: 30%;
   padding: 10px;
@@ -165,7 +165,7 @@
   align-items: center;
 }
 
-.exam-buttonbox button{
+.exam-buttonbox button {
   margin: auto;
   font-family: "Inter", sans-serif;
   font-size: 28px;
@@ -180,7 +180,7 @@
   align-items: center;
 }
 
-.exam-buttonbox button:hover{
+.exam-buttonbox button:hover {
   cursor: pointer;
   transform: translateY(-5px);
   box-shadow: 0 5px 5px var(--shadow-color);
@@ -213,7 +213,7 @@
   width: 500px;
   height: 325px;
   padding: 50px;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -259,58 +259,57 @@
   transition: 0.25s;
 }
 
-.exam-buttonbox button.ai-review{
+.exam-buttonbox button.ai-review {
   background-color: var(--bport-secondary-gold);
 }
 
-.exam-buttonbox button:active{
+.exam-buttonbox button:active {
   background-color: var(--bport-gold);
 }
 
-.exam-buttonbox button.hide{
+.exam-buttonbox button.hide {
   display: none;
 }
 
 /** Exam Questions Buttons **/
-.exam-questionbox{
+.exam-questionbox {
   font-size: 20px;
   width: 600px;
   padding-right: 100px;
   margin-right: auto;
 }
 
-.question-textbox textarea{
+.question-textbox textarea {
   height: 400px;
   width: 600px;
   border-radius: 10px;
   font-size: 20px;
   text-align: start;
-  border: 0.1px solid grey; 
+  border: 0.1px solid grey;
   resize: none;
 }
 
-.question-textbox textarea:hover{
+.question-textbox textarea:hover {
   border: 2px solid grey;
 }
 
 /** Feedback **/
-.exam-aifeedback input{
+.exam-aifeedback input {
   accent-color: red;
 }
 
-.feedback-textbox textarea{
+.feedback-textbox textarea {
   max-height: 150px;
   overflow-y: scroll;
   width: 600px;
   border-radius: 10px;
   font-size: 20px;
   text-align: start;
-  border: 0.1px solid grey; 
+  border: 0.1px solid grey;
   resize: none;
 }
 
 /** Navigation **/
-=======
 .confirm-cancel-buttons button:active {
   background-color: var(--bport-secondary-gold);
 }
@@ -356,7 +355,7 @@
   padding: 8px 16px;
   font-size: 14px;
   cursor: pointer;
-}  
+}
 
 /** Course List **/
 .exam-list-box {

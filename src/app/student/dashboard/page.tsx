@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import styles from "./page.module.css";
-import Header from '../../components/Header';
+import Header from "../../components/Header";
 
-import PrevNext from '@/app/components/PrevNext';
-import CourseList from '@/app/components/CourseList';
-import Link from 'next/link';
-
+import PrevNext from "@/app/components/PrevNext";
+import CourseList from "@/app/components/DashboardCourseList";
+import Link from "next/link";
 
 const Page: React.FC = () => {
   const pageTitle = "Dashboard";
@@ -17,6 +16,10 @@ const Page: React.FC = () => {
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
         <CourseList></CourseList>
+        <p>
+          To Add: Courselist slider currently showing exams? Should be just slider for courses. Each
+          card directs to a course page. Also fix course slider width to fit inside screen width.
+        </p>
         <Link href="./course">Course</Link>
       </div>
     </div>
@@ -24,4 +27,3 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-

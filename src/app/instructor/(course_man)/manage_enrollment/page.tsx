@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import styles from "./page.module.css";
-import Header from '../../../components/Header';
+import Header from "../../../components/Header";
 
 const Page: React.FC = () => {
   const pageTitle = "Manage Enrollment";
@@ -11,11 +11,14 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
-        
+        <p>
+          To Add: student list with checkboxes, and a "remove students" button. Popup for removing
+          students. Add students button on page, which will be a different view for adding students
+          with a confirmation popup for adding to the course.
+        </p>
       </div>
     </div>
   );
 };
 
 export default Page;
-
