@@ -1,0 +1,16 @@
+/* Add your page-specific css here.*/
+
+.course-home-page {
+  display: flex;
+  flex-grow: 1;
+}
+
+.course-exams-page {
+  display: flex;
+  flex-grow: 1;
+}
+
+.course-students-page {
+  display: flex;
+  flex-grow: 1;
+}

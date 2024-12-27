@@ -1,42 +1,98 @@
+/* Import fonts and icons */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("@fortawesome/fontawesome-free/css/all.min.css");
+
+/* Root variables for colors, shadows, and font size */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bport-green: rgb(0 82 62);
+  --bport-gold: rgb(225 199 58);
+  --bport-secondary-green1: rgb(120, 157, 74);
+  --bport-secondary-green2: rgb(87, 121, 53);
+  --bport-secondary-gold: rgb(255, 164, 0);
+  --bport-secondary-gold: rgb(255, 164, 0);
+  --edually-red: rgb(238, 50, 60);
+  --panel-color: rgb(200, 200, 200);
+  --tint-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --text-shadow-color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Temp */
+.main-workspace a {
+  height: 20px;
+  margin-inline: 5px;
+  padding-inline: 5px;
+  font-weight: 700;
 }
 
+/* Reset margins and padding for body */
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: var(--background-color);
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+/* General heading styles */
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2rem);
+}
+
+h3 {
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+i {
+  font-size: 1.5rem;
+  padding-inline: 10px 20px;
+}
+
+/* Everything but the Nav (includes Header) */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: calc(100% - clamp(200px, 20vw, 350px));
+  background-color: var(--background-color);
+}
+
+/* Everything but the Nav and Header */
+.main-workspace {
+  width: calc(100% - 50px);
+  padding: 25px;
+  box-shadow: 0 15px 15px -15px var(--shadow-color) inset;
+  overflow-y: scroll;
+  min-height: calc(100vh - 150px);
+  max-height: calc(100vh - 160px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-panel {
+  background-color: var(--panel-color);
+  padding: 25px;
+  box-shadow: 0 5px 5px var(--shadow-color);
+  border-radius: 15px;
+  margin: 15px;
 }
