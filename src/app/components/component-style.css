@@ -638,6 +638,135 @@
   flex-grow: 1;
 }
 
+/** Manage Users **/
+
+.manage-user-panel {
+  background-color: var(--panel-color);
+  box-shadow: 0px 7px 5px var(--shadow-color);
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--inter);  
+}
+
+.manage-users-label {
+  display: flex;
+  width: calc(100% - 15px);
+  font-size: 1.25rem;
+  font-weight: 600;
+  height: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.manage-users-searchbox {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-right: 5%;
+  margin-block: 5px;
+  gap: 5px;
+}
+
+.m-u-usersearch {
+  width: calc(100% - 10px);
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  font-family: var(--inter);
+  border-radius: 10px;
+}
+
+.m-u-usersearch-button {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  font-weight: 600;
+  background-color: var(--bport-secondary-gold);
+  font-family: var(--inter);
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.m-u-usersearch-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 3px var(--text-shadow-color);
+}
+
+.m-u-usersearch-button:active {
+  transform: translateY(2px);
+  background-color: var(--bport-gold);
+}
+
+.manage-users-infoform {
+  display: flex;
+  width: 65%;
+
+  text-align: right;
+  margin-block: 5px;
+}
+
+.manage-users-infoform form {
+  width: 100%;
+}
+
+.manage-users-infoform .m-u-name {
+  width: calc(35% - 10px);
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  font-family: var(--inter);
+  border-radius: 10px;
+  margin-inline: 5px;
+}
+
+.manage-users-infoform .m-u-email {
+  width: calc(70% - 0px);
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  font-family: var(--inter);
+  border-radius: 10px;
+  margin-inline: 5px;
+  margin-top: 5px;
+}
+
+.manage-users-infotext {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  margin-block: 5px;
+}
+
+.manage-users-infotext p {
+  margin: 0px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-shadow-color);
+}
+
+.manage-users-options {
+  display: flex;
+  width: 30%;
+  margin-left: 5%;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-block: 5px;
+}
+
+.manage-users-options form {
+  width: 80%;
+}
+
+.manage-users-options input {
+  display: inline;
+  margin-inline: 5%;
+}
+
+
 /** Exam Components **/
 .exam-slide {
   background-color: white;
