@@ -617,37 +617,46 @@
   margin-block: 0.5em;
 }
 
-.student-course-nav-bar-kid {
-  background-color: aquamarine;
-  padding: 10px;
-}
 
 .student-course-home-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
 }
 
-.student-course-home-body .upcoming-exams {
-  flex-grow: 1;
-  width: 50%;
-}
-
+.student-course-home-body .upcoming-exams,
 .student-course-home-body .course-info {
-  flex-grow: 1;
+  flex: 1 1 50%; 
+  min-height: 400px;
 }
+
+@media (max-width: 1000px) { /* what do you want the breakpoint to be? */
+  .student-course-home-body {
+    flex-direction: column;
+  }
+
+  .student-course-home-body .upcoming-exams,
+  .student-course-home-body .course-info {
+    flex: 1 1 auto;
+    width: 85%; 
+  }
+}
+
 
 /** Exam Components **/
 .exam-slide {
   background-color: white;
   border-style: solid;
-  border-color: black;
+  border-color: grey;
   border-width: 0.5px;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 15px;
   padding: 10px;
+  width: 90%;
 }
 
 .exam-slide p {
@@ -657,8 +666,131 @@
 
 .exam-slide-box {
   overflow-y: scroll;
-  height: 400px;
+  height: 375px;
+  width: 100%;
 }
+
+.student-course-exams {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 400px;
+}
+
+.student-course-exams h3 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.student-exam-list {
+  min-height: 350px;
+  margin: 10px;
+  padding: 5px;
+  background-color: var(--shadow-color);
+  border-radius: 5px;
+}
+
+.student-exam-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.student-exam-list-header > div {
+  flex: 1; 
+  text-align: center; 
+  padding-bottom: 10px;
+}
+
+.student-exam-list-header > div:nth-child(1) {
+  flex: 1;
+}
+
+.student-exam-list-header > div:nth-child(2) {
+  flex: 1.5;
+}
+
+.student-exam-list-header > div:nth-child(3) {
+  flex: .75;
+}
+
+.student-exam-list-header > div:nth-child(4) {
+  flex: 1.5;
+}
+
+.student-exam-list-body {
+  width: 100%;
+  max-height: 330px;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+.student-exam-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-color: var(--shadow-color);
+  border-bottom-width: 0.25;
+}
+
+.student-exam-list-item > div {
+  flex: 1; 
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-align: center; 
+  font-size: 18px;
+}
+
+.student-exam-list-item > div:nth-child(1) {
+  flex: 1;
+  color: var(--bport-green);
+  font-weight: bolder; 
+}
+
+.student-exam-list-item > div:nth-child(2) {
+  flex: 1.5;
+}
+
+.student-exam-list-item > div:nth-child(3) {
+  flex: .75;
+}
+
+.student-exam-list-item > div:nth-child(4) {
+  flex: 1.5;
+}
+
+.student-exam-list-item .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.student-exam-list-item .actions button {
+  background-color: var(--shadow-color);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  flex: 1; 
+  text-align: center; 
+}
+
+.student-exam-list-item .actions button .inactive {
+  opacity: 0.15;
+}
+
 
 /** Media Queries **/
 @media screen and (max-width: 1505px) {

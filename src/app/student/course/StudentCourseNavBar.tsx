@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "./component-style.css";
+import "../../components/component-style.css";
 import StudentCourseExams from "./StudentCourseExams";
 import StudentCourseHome from "./StudentCourseHome";
 
