@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import Header from "../../../components/Header";
+import AddCourseScreen from "./AddCourseScreen";
 
 const Page: React.FC = () => {
   const pageTitle = "Create Course";
@@ -10,8 +11,7 @@ const Page: React.FC = () => {
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
-        {/* Add your content within the main-workspace div */}
-        <p>To Add: form for course creation (see figma)</p>
+        <AddCourseScreen />
       </div>
     </div>
   );
