@@ -35,6 +35,7 @@ body {
 
 body {
   display: flex;
+  justify-content: center;
   background-color: var(--background-color);
   font-family: "Inter", sans-serif;
   overflow: hidden;
