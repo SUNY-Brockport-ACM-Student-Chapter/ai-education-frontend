@@ -4,8 +4,8 @@
 
 /* Root variables for colors, shadows, and font size */
 :root {
-  --bport-green: rgb(0 82 62);
-  --bport-gold: rgb(225 199 58);
+  --bport-green: #00523e;
+  --bport-gold: rgb(225, 199, 58);
   --bport-secondary-green1: rgb(120, 157, 74);
   --bport-secondary-green2: rgb(87, 121, 53);
   --bport-secondary-gold: rgb(255, 164, 0);

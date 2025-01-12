@@ -2,7 +2,6 @@
 "use client";
 import React, { useEffect } from "react";
 import styles from "./page.module.css";
-import Header from "./components/Header";
 import { SignInButton, SignedIn, SignedOut, useAuth, useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 
@@ -27,22 +26,16 @@ const Page: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Header pageTitle="Welcome to EduAlly" />
-      
       <div className={styles.mainContent}>
         <SignedOut>
           <div className={styles.welcomeSection}>
-            <h1 className={styles.title}>Transform Your Learning Experience</h1>
-            <p className={styles.subtitle}>Your AI-Powered Education Assistant</p>
-            <p className={styles.description}>
-              Join EduAlly to access personalized learning tools, interactive assessments, 
-              and collaborative features designed to enhance your educational journey.
-            </p>
+            <h1 className={styles.title}>Welcome to EduAlly</h1>
+            <p className={styles.subtitle}>Your AI-Integreated Personal Assessment Tool</p>
             
             <div className={styles.authButtons}>
               <SignInButton mode="modal">
-                <button className={styles.signInButton}>
-                  Get Started
+                <button className={styles.login}>
+                  Login
                 </button>
               </SignInButton>
             </div>

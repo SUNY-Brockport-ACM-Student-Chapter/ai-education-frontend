@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ProfileIcon from "./ProfileIcon";
 import { useUser } from "../utils/UserContext";
 import "./component-style.css";
 import Link from "next/link";
@@ -56,11 +55,8 @@ const NavMenu: React.FC = () => {
     <SignedIn>
       <nav className="sidebar-nav">
         <div className="logo-section">
-          <ProfileIcon initials={userInitials} className="mobile-profile-icon" />
-
-          <Link href="/">
+          
             <h1>EduAlly</h1>
-          </Link>
 
           <label className="burger-bar-dropdown">
             <input type="checkbox" checked={menuVisible} onChange={toggleMenu} />

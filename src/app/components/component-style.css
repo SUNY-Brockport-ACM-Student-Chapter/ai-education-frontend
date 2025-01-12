@@ -577,6 +577,7 @@
   align-items: center;
   padding: 0 15px;
   transition: 0.25s;
+  margin-right: 15px;
 }
 
 /** Student Course Components **/
