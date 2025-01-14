@@ -2,8 +2,8 @@
 .prevnext-buttonbox {
   width: 300px;
   height: 150px;
-  background-color: var(--tint-color);
-  border-radius: 15px;
+  background-color: var(--shadow-color);
+  border-radius: var(--border-radius);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -13,11 +13,11 @@
 .prevnext-buttonbox button {
   font-family: "Inter", sans-serif;
   font-size: 28px;
-  color: white;
-  background-color: var(--bport-green);
+  color: var(--font-colorL);
+  background-color: var(--green-base);
   width: 40%;
   height: 70px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   border: 0;
   transition: 0.25s;
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .prevnext-buttonbox button:active {
-  background-color: var(--bport-gold);
+  background-color: var(--gold-base);
 }
 
 .prevnext-buttonbox button.end-review {
@@ -59,7 +59,7 @@
   height: 500px;
   margin-bottom: 25px;
   padding: 20px;
-  background-color: var(--tint-color);
+  background-color: var(--shadow-color);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -84,10 +84,10 @@
 .qcard {
   width: 30%;
   height: 90px;
-  background-color: var(--bport-green);
+  background-color: var(--green-base);
   border-radius: 15px;
   display: inline-block;
-  color: white;
+  color: var(--font-colorL);
   font-size: 28px;
   text-align: center;
   display: flex;
@@ -106,7 +106,7 @@
 
 .qcard:active {
   box-shadow: 0 5px 0px inset var(--shadow-color);
-  background-color: var(--bport-secondary-gold);
+  background-color: var(--sec-gold);
   transform: translateY(0px);
   transition: 0.15s;
 }
@@ -121,7 +121,7 @@
   height: 10px;
   margin: 20px 0px;
   border-radius: 10px;
-  background-color: var(--bport-green);
+  background-color: var(--green-base);
   justify-self: flex-end;
 }
 
@@ -135,7 +135,7 @@
 }
 
 .exampage-infobox h4 {
-  color: grey;
+  color: var(gray-base);
   font-size: 18px;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .exampage-infobox-dates {
-  color: grey;
+  color: var(gray-base);
   line-height: 8px;
 }
 
@@ -169,8 +169,8 @@
   margin: auto;
   font-family: "Inter", sans-serif;
   font-size: 28px;
-  color: white;
-  background-color: var(--bport-green);
+  color: var(--font-colorL);
+  background-color: var(--green-base);
   height: 60px;
   border-radius: 15px;
   border: 0;
@@ -238,7 +238,7 @@
   font-weight: 500;
   font-family: "Inter", sans-serif;
   font-size: 28px;
-  color: white;
+  color: var(--font-colorL);
   width: 40%;
   border-radius: 15px;
   border: 0;
@@ -246,11 +246,11 @@
 }
 
 .confirm-cancel-buttons button.confirm {
-  background-color: var(--bport-green);
+  background-color: var(--green-base);
 }
 
 .confirm-cancel-buttons button.cancel {
-  background-color: var(--edually-red);
+  background-color: var(--red-base);
 }
 
 .confirm-cancel-buttons button:hover {
@@ -261,11 +261,11 @@
 }
 
 .exam-buttonbox button.ai-review {
-  background-color: var(--bport-secondary-gold);
+  background-color: var(--sec-gold);
 }
 
 .exam-buttonbox button:active {
-  background-color: var(--bport-gold);
+  background-color: var(--gold-base);
 }
 
 .exam-buttonbox button.hide {
@@ -286,17 +286,17 @@
   border-radius: 10px;
   font-size: 20px;
   text-align: start;
-  border: 0.1px solid grey;
+  border: 0.1px solid var(gray-base);
   resize: none;
 }
 
 .question-textbox textarea:hover {
-  border: 2px solid grey;
+  border: 2px solid var(gray-base);
 }
 
 /** Feedback **/
 .exam-aifeedback input {
-  accent-color: red;
+  accent-color: var(--red-base);
 }
 
 .feedback-textbox textarea {
@@ -306,13 +306,13 @@
   border-radius: 10px;
   font-size: 20px;
   text-align: start;
-  border: 0.1px solid grey;
+  border: 0.1px solid var(gray-base);
   resize: none;
 }
 
 /** Navigation **/
 .confirm-cancel-buttons button:active {
-  background-color: var(--bport-secondary-gold);
+  background-color: var(--sec-gold);
 }
 
 /* Popup Button for Exam Exit (TEMPORARY) */
@@ -346,7 +346,7 @@
 }
 
 .popup-content {
-  background: white;
+  background: var(--font-colorL);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -366,7 +366,7 @@
   height: 200px;
   margin-bottom: 25px;
   padding: 20px;
-  background-color: var(--tint-color);
+  background-color: var(--shadow-color);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -394,10 +394,10 @@
   /*width: 30%;*/
   flex: 0 0 15%;
   height: 90px;
-  background-color: white;
+  background-color: var(--font-colorL);
   border-radius: 15px;
   display: inline-block;
-  color: black;
+  color: var(--font-colorD);
   font-size: 20px;
   text-align: center;
   display: flex;
@@ -421,8 +421,8 @@
   flex-direction: column;
   width: clamp(200px, 20vw, 350px);
   height: 100vh;
-  background-color: var(--bport-green);
-  color: white;
+  background-color: var(--green-base);
+  color: var(--font-colorL);
 }
 
 .sidebar-nav a {
@@ -433,10 +433,10 @@
 
 .sidebar-nav .logo-section {
   width: calc(100% - 30px);
-  margin: 9px 10px 12px 10px;
+  margin: 9px 10px 11px 10px;
   padding: 10px 5px;
   text-align: center;
-  background: linear-gradient(to bottom, var(--bp-greenL), var(--bport-green));
+  background: var(--gradient-greenL);
   box-shadow:
     0 5px 7px var(--shadow-color),
     0px 1px 1px inset rgba(255, 255, 255, 0.1);
@@ -472,23 +472,20 @@
   height: 4rem;
   padding: 15px;
   margin-top: 25px;
-  background-color: transparent;
+  background: none;
   border: 0;
-  border-radius: 25px;
-  font-family: "Inter", sans-serif;
+  border-radius: var(--border-radius);
+  box-shadow: none;
   font-size: 1.5rem;
   font-weight: 600;
   gap: 30px;
-  line-height: 25px;
-  color: white;
+  color: var(--font-colorL);
   text-align: left;
   text-shadow: 0 3px 3px var(--text-shadow-color);
-  transition: 0.25s;
-  cursor: pointer;
 }
 
 .nav-button:hover {
-  background: linear-gradient(to bottom, var(--bp-greenL), var(--bport-green));
+  background: var(--gradient-greenL);
   box-shadow:
     0 5px 7px var(--shadow-color),
     0px 1px 1px inset rgba(255, 255, 255, 0.1);
@@ -496,7 +493,7 @@
 }
 
 .nav-button:active {
-  background: linear-gradient(to bottom, var(--bport-green), var(--bp-greenD));
+  background: var(--gradient-greenD);
   box-shadow:
     0 5px 7px var(--shadow-color) inset,
     0px 1px 1px rgba(255, 255, 255, 0.1);
@@ -512,7 +509,7 @@
   height: 50px;
   margin-right: 10px;
   cursor: pointer;
-  color: white;
+  color: var(--font-colorL);
   text-align: center;
   display: none;
 }
@@ -538,38 +535,6 @@
   margin: 25px;
 }
 
-.main-header .profile-icon {
-  align-content: center;
-  background-color: var(--bport-secondary-green1);
-  border-radius: 100px;
-  padding: 5px;
-  width: 70px;
-  height: 70px;
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  transition: 0.5s;
-  scale: 80%;
-}
-
-.main-header .profile-icon:hover {
-  border-radius: 5px;
-  transition: 0.5s;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 5px var(--text-shadow-color);
-  cursor: pointer;
-}
-
-.main-header .profile-text {
-  justify-self: flex-end;
-  padding: 0 15px;
-  text-align: center;
-  line-height: 0.5rem;
-  font-weight: 600;
-  transition: 0.25s;
-}
-
 .main-header .profile-section {
   justify-self: flex-end;
   display: flex;
@@ -582,7 +547,7 @@
 
 /** Student Course Components **/
 .student-course-nav-bar {
-  background-color: var(--bport-green);
+  background-color: var(--green-base);
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -593,7 +558,8 @@
 }
 
 .student-course-nav-bar button {
-  color: white;
+  color: var(--font-colorL);
+  background: none;
   box-shadow: none;
   border: none;
   border-radius: 5px;
@@ -605,7 +571,7 @@
 }
 
 .student-course-nav-bar .not-selected {
-  background-color: var(--bport-green);
+  background-color: var(--green-base);
   transition: 0.5s;
 }
 
@@ -641,9 +607,9 @@
 
 /** Exam Components **/
 .exam-slide {
-  background-color: white;
+  background-color: var(--font-colorL);
   border-style: solid;
-  border-color: black;
+  border-color: var(--font-colorD);
   border-width: 0.5px;
   border-radius: 5px;
   margin-top: 10px;
@@ -748,7 +714,7 @@
   }
 
   .nav-button:hover {
-    box-shadow: 0 0 15px var(--tint-color);
+    box-shadow: 0 0 15px var(--shadow-color);
   }
 
   .logo-section i {
