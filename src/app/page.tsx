@@ -1,25 +1,50 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import styles from "./page.module.css";
-import Header from "./components/Header";
-import Link from "next/link";
+import { SignInButton, SignedIn, SignedOut, useAuth, useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+
 const Page: React.FC = () => {
-  const pageTitle = "landing page";
-  /* Set page title here, displayed in Header */
+  const { isSignedIn } = useAuth();
+  const { user } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if user is signed in and has metadata
+    if (isSignedIn && user?.publicMetadata?.role) {
+      const userRole = user.publicMetadata.role as string;
+
+      // Redirect based on role
+      if (userRole === "instructor") {
+        router.push("/instructor/dashboard");
+      } else if (userRole === "student") {
+        router.push("/student/dashboard");
+      }
+    }
+  }, [isSignedIn, user, router]);
 
   return (
-    /* DO NOT WORK ON DEEPER PAGES ON THIS PAGE! WILL CAUSE ISSUES WHEN MERGING, THANK YOU! */
+    <div className={styles.container}>
+      <div className={styles.mainContent}>
+        <SignedOut>
+          <div className={styles.welcomeSection}>
+            <h1 className={styles.title}>Welcome to EduAlly</h1>
+            <p className={styles.subtitle}>Your AI-Integreated Personal Assessment Tool</p>
 
-    <div className={styles.Container}>
-      <Header pageTitle={pageTitle} />
-      <div className="main-workspace">
-        <p>Temporary Navigation Links</p>
-        <Link href="/student/dashboard">Student Dashboard </Link>
+            <div className={styles.authButtons}>
+              <SignInButton mode="modal">
+                <button className={styles.login}>Login</button>
+              </SignInButton>
+            </div>
+          </div>
+        </SignedOut>
 
-        <Link href="/instructor/dashboard">Instructor Dashboard</Link>
-        <p>
-          To Add: Clerk integration, make this the login page. Also, clear nav bar somehow. Can't go
-          to dashboard, courses, or settings from here since you're not even logged in.
-        </p>
+        <SignedIn>
+          <div className={styles.loadingSection}>
+            <div className={styles.loadingSpinner}></div>
+            <p className={styles.loadingText}>Loading your dashboard...</p>
+          </div>
+        </SignedIn>
       </div>
     </div>
   );
