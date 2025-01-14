@@ -11,15 +11,8 @@ const Page: React.FC = () => {
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
-        <UserProfile appearance={{
-        elements: {
-          rootBox: {
-            transform: "scale(1.2)",
-            margin: "60px 75px", 
-          },
-        },
-      }} />
-            </div>
+        <UserProfile />
+      </div>
     </div>
   );
 };

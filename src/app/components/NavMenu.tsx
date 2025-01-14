@@ -56,7 +56,7 @@ const NavMenu: React.FC = () => {
       <nav className="sidebar-nav">
         <div className="logo-section">
           
-            <h1>EduAlly</h1>
+            EduAlly
 
           <label className="burger-bar-dropdown">
             <input type="checkbox" checked={menuVisible} onChange={toggleMenu} />
