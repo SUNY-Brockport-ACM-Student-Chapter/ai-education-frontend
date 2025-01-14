@@ -4,7 +4,7 @@ import { useUser } from "../utils/UserContext";
 import "./component-style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SignedIn } from '@clerk/nextjs';
+import { SignedIn } from "@clerk/nextjs";
 
 const NavMenu: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -38,26 +38,23 @@ const NavMenu: React.FC = () => {
   const navLinks =
     userRole === "instructor"
       ? [
-        { href: "/instructor/dashboard", label: "Dashboard", icon: "fa-cubes" },
-        { href: "/instructor/course", label: "Courses", icon: "fa-check-circle" },
-        { href: "/instructor/settings", label: "Settings", icon: "fa-cog" },
-      ]
+          { href: "/instructor/dashboard", label: "Dashboard", icon: "fa-cubes" },
+          { href: "/instructor/course", label: "Courses", icon: "fa-check-circle" },
+          { href: "/instructor/settings", label: "Settings", icon: "fa-cog" },
+        ]
       : [
-        { href: "/student/dashboard", label: "Dashboard", icon: "fa-cubes" },
-        { href: "/student/course", label: "Courses", icon: "fa-check-circle" },
-        { href: "/student/settings", label: "Settings", icon: "fa-cog" },
-      ];
+          { href: "/student/dashboard", label: "Dashboard", icon: "fa-cubes" },
+          { href: "/student/course", label: "Courses", icon: "fa-check-circle" },
+          { href: "/student/settings", label: "Settings", icon: "fa-cog" },
+        ];
 
   const settingsLink = navLinks.find((link) => link.label === "Settings");
 
   return (
-
     <SignedIn>
       <nav className="sidebar-nav">
         <div className="logo-section">
-          
-            EduAlly
-
+          EduAlly
           <label className="burger-bar-dropdown">
             <input type="checkbox" checked={menuVisible} onChange={toggleMenu} />
             <i className="fas fa-bars"></i>

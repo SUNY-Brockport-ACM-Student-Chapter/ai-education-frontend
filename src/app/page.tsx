@@ -1,9 +1,8 @@
-
 "use client";
 import React, { useEffect } from "react";
 import styles from "./page.module.css";
-import { SignInButton, SignedIn, SignedOut, useAuth, useUser } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
+import { SignInButton, SignedIn, SignedOut, useAuth, useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 const Page: React.FC = () => {
   const { isSignedIn } = useAuth();
@@ -14,12 +13,12 @@ const Page: React.FC = () => {
     // Check if user is signed in and has metadata
     if (isSignedIn && user?.publicMetadata?.role) {
       const userRole = user.publicMetadata.role as string;
-      
+
       // Redirect based on role
-      if (userRole === 'instructor') {
-        router.push('/instructor/dashboard');
-      } else if (userRole === 'student') {
-        router.push('/student/dashboard');
+      if (userRole === "instructor") {
+        router.push("/instructor/dashboard");
+      } else if (userRole === "student") {
+        router.push("/student/dashboard");
       }
     }
   }, [isSignedIn, user, router]);
@@ -31,12 +30,10 @@ const Page: React.FC = () => {
           <div className={styles.welcomeSection}>
             <h1 className={styles.title}>Welcome to EduAlly</h1>
             <p className={styles.subtitle}>Your AI-Integreated Personal Assessment Tool</p>
-            
+
             <div className={styles.authButtons}>
               <SignInButton mode="modal">
-                <button className={styles.login}>
-                  Login
-                </button>
+                <button className={styles.login}>Login</button>
               </SignInButton>
             </div>
           </div>
