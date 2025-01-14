@@ -32,7 +32,9 @@
   padding: 2rem;
   background: var(--panel-gradient);
   border-radius: 25px;
-  box-shadow: 0 10px 6px var(--shadow-color), inset 0px 2px 3px rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 10px 6px var(--shadow-color),
+    inset 0px 2px 3px rgba(255, 255, 255, 0.7);
 }
 
 .title {
@@ -52,7 +54,9 @@
   color: white;
   padding: 10px 50px 13px;
   border-radius: 25px;
-  box-shadow: 0 3px 3px var(--shadow-color), inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 3px 3px var(--shadow-color),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.25);
   transition: 0.1s;
 }
 
@@ -61,10 +65,11 @@
   transform: translateY(1px);
   cursor: pointer;
   background: var(--gradient-greenD);
-  box-shadow: inset 0 3px 3px var(--shadow-color), 0px 1px 1px rgba(255, 255, 255, 0.25);
+  box-shadow:
+    inset 0 3px 3px var(--shadow-color),
+    0px 1px 1px rgba(255, 255, 255, 0.25);
   text-shadow: 0 3px 3px var(--shadow-color);
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {

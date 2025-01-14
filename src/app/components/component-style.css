@@ -437,7 +437,8 @@
   padding: 10px 5px;
   text-align: center;
   background: linear-gradient(to bottom, var(--bp-greenL), var(--bport-green));
-  box-shadow: 0 5px 7px var(--shadow-color),
+  box-shadow:
+    0 5px 7px var(--shadow-color),
     0px 1px 1px inset rgba(255, 255, 255, 0.1);
   font-size: 3rem;
   font-weight: 700;
@@ -453,7 +454,9 @@
   padding: 0 25px 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 15px var(--shadow-color) inset, 0px 1px 5px rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 15px var(--shadow-color) inset,
+    0px 1px 5px rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-nav .settings-section {
@@ -486,14 +489,16 @@
 
 .nav-button:hover {
   background: linear-gradient(to bottom, var(--bp-greenL), var(--bport-green));
-  box-shadow: 0 5px 7px var(--shadow-color),
+  box-shadow:
+    0 5px 7px var(--shadow-color),
     0px 1px 1px inset rgba(255, 255, 255, 0.1);
   transition: 0.1s;
 }
 
 .nav-button:active {
   background: linear-gradient(to bottom, var(--bport-green), var(--bp-greenD));
-  box-shadow: 0 5px 7px var(--shadow-color) inset,
+  box-shadow:
+    0 5px 7px var(--shadow-color) inset,
     0px 1px 1px rgba(255, 255, 255, 0.1);
   transition: 0.1s;
 }
