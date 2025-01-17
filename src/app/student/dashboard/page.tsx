@@ -14,7 +14,7 @@ const Page: React.FC = () => {
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
-        {/* Add your content within the main-workspace div */}
+        {/* Add your content within main-workspace div */}
         <CourseList></CourseList>
         <p>
           To Add: Courselist slider currently showing exams? Should be just slider for courses. Each
