@@ -786,7 +786,8 @@
 
 /** Instructor Course Home Exams List **/
 
-#instructor-create-exam-button {
+#instructor-create-exam-button,
+#instructor-manage-enrollment-button {
   font-family: "Inter", sans-serif;
   border: none;
   width: 100%;
@@ -802,7 +803,8 @@
   box-sizing: border-box;
 }
 
-#instructor-create-exam-button:active {
+#instructor-create-exam-button:active,
+#instructor-manage-enrollment-button:active {
   transform: translateY(2px);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -830,16 +832,15 @@
 
 }
 
-
-
-
-.instructor-course-exams .instructor-course-exams-top {
+.instructor-course-exams .instructor-course-exams-top, 
+.instructor-course-students .instructor-course-students-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between; 
 }
 
-.instructor-course-exams .instructor-course-exams-top div {
+.instructor-course-exams .instructor-course-exams-top div,
+.instructor-course-students .instructor-course-students-top div {
   flex: 1; 
   float: right;
   max-width: 20%;
@@ -994,20 +995,25 @@
   opacity: 0.15;
 }
 
-.instructor-course-exams {
+.instructor-course-exams,
+.instructor-course-students {
   margin-top: 20px;
   width: 100%;
   min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.instructor-course-exams h3 {
+.instructor-course-exams h3,
+.instructor-course-students h3 {
   margin-top: 20px;
   margin-left: 10px;
   margin-bottom: 10px;
   font-size: 30px;
 }
 
-.instructor-exam-list {
+.instructor-exam-list,
+.instructor-student-list {
   min-height: 350px;
   margin: 10px;
   padding: 5px;
@@ -1015,10 +1021,11 @@
   border-radius: 5px;
 }
 
-.instructor-exam-list-header {
+.instructor-exam-list-header,
+.instructor-student-list-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   font-weight: bold;
   font-size: 20px;
@@ -1026,7 +1033,8 @@
   padding-bottom: 10px;
 }
 
-.instructor-exam-list-header>div {
+.instructor-exam-list-header > div,
+.instructor-student-list-header > div {
   flex: 1;
   text-align: center;
   padding-bottom: 10px;
@@ -1048,14 +1056,16 @@
   flex: 1.5;
 }
 
-.instructor-exam-list-body {
+.instructor-exam-list-body,
+.instructor-student-list-body {
   width: 100%;
   max-height: 330px;
   overflow-y: scroll;
   border-radius: 5px;
 }
 
-.instructor-exam-list-item {
+.instructor-exam-list-item,
+.instructor-student-list-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1066,7 +1076,8 @@
   border-bottom-width: 0.25;
 }
 
-.instructor-exam-list-item>div {
+.instructor-exam-list-item>div,
+.instructor-student-list-item> div {
   flex: 1;
   padding-top: 25px;
   padding-bottom: 15px;
