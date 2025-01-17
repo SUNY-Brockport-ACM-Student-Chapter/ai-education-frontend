@@ -7,14 +7,14 @@ import ExamListItem from "./ExamListItem";
 
 const ExamList = () => {
   return (
-    <div className="student-exam-list">
-      <div className="student-exam-list-header">
+    <div className="instructor-exam-list">
+      <div className="instructor-exam-list-header">
         <div> Exam Name </div>
         <div> Submissions </div>
         <div> Due Date </div>
         <div> Actions </div>
       </div>
-      <div className="student-exam-list-body">
+      <div className="instructor-exam-list-body">
         <ExamListItem
           examName="Quiz 1"
           dueDate="01/05/2025"

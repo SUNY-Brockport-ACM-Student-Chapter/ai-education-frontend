@@ -23,7 +23,7 @@ const InstructorCourseNavBar = () => {
 
   return (
     <div>
-      <div className="student-course-nav-bar">
+      <div className="instructor-course-nav-bar">
         <button
           onClick={handleHomeClick}
           className={view === "home" ? "selected" : "not-selected"}

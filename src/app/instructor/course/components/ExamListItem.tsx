@@ -11,7 +11,7 @@ const ExamListItem: React.FC<ExamListItemProps> = ({ examName, dueDate, attempts
   const isDueDateInFuture = new Date(dueDate) >= new Date();
 
   return (
-    <div className="student-exam-list-item">
+    <div className="instructor-exam-list-item">
       <div>{examName}</div>
       <div>{attempts}/20</div>
       <div>{dueDate}</div>
