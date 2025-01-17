@@ -793,6 +793,171 @@
 
 /** End of instructor add course **/
 
+/** Instructor Modify Course **/
+.instructor-modify-course {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  max-width: 100%;
+}
+
+.instructor-modify-course-background-panel {
+  box-shadow: 0px 4px 6px #ccc;
+  font-family: "Inter", sans-serif;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 25px;
+  box-sizing: border-box; 
+}
+
+.instructor-modify-course-background-panel input[type="date"] {
+  font-family: "Inter", sans-serif;
+  background-color: #ccc;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.instructor-modify-course span {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.instructor-modify-course > div:nth-child(1) {
+  flex: 6 1 60%; 
+}
+
+.instructor-modify-course > div:nth-child(2) {
+  flex: 3 1 30%; 
+}
+
+.instructor-modify-course > div:nth-child(3) {
+  flex: 9.5 1 95%; 
+}
+
+.instructor-modify-course > div:nth-child(4) {
+  flex: 2 1 20%; 
+}
+
+.instructor-modify-course > div:nth-child(5) {
+  flex: 7 1 70%;
+}
+
+.instructor-modify-course-background-panel h3 {
+  padding-bottom: 10px;
+}
+
+#instructor-modify-course-name-input {
+  width: 100%;
+  background-color: #ccc;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#instructor-modify-course-code-input {
+  width: 100%;
+  background-color: #ccc;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#instructor-modify-course-description-input {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: #ccc;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#instructor-modify-course-capacity-input {
+  width: 100%;
+  background-color: #ccc;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.instructor-modify-course-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50%;
+  box-sizing: border-box;
+}
+
+.instructor-modify-course-inactive-button {
+  float: left;
+}
+
+.instructor-modify-course-inactive-button button {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bport-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0px 4px 6px var(--text-shadow-color);
+  outline: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.instructor-modify-course-inactive-button button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+.instructor-modify-course-buttons {
+  display: flex;
+  gap: 20px;
+  float: right;
+}
+
+.instructor-modify-course-buttons button {
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0px 4px 6px var(--text-shadow-color);
+  outline: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.instructor-modify-course-buttons button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.instructor-modify-course-submit {
+  background-color: var(--bport-green);
+  color: white;
+}
+
+/** End of instructor modify course **/
+
 /** Media Queries **/
 @media screen and (max-width: 1505px) {
   .profile-text {
