@@ -18,21 +18,20 @@ const ExamListItem: React.FC<ExamListItemProps> = ({ examName, dueDate, attempts
 
       <div className="instructor-actions">
 
-        <Link href="./exam_submissions" className="link-button">
-          <button>
+        <Link href="./exam_submissions">
+          <button className="active">
             Submissions
           </button>
         </Link>
-
-         {isDueDateInFuture ? (
-          <Link href="./modify_exam" className="link-button">
+        <Link href="./modify_exam">
+          {isDueDateInFuture ? (
             <button className="active">Modify</button>
-          </Link>
-        ) : (
-          <button className="inactive" disabled>
-            Modify
-          </button>
-        )}
+          ) : (
+            <button className="inactive" disabled>
+              Modify
+            </button>
+          )}
+        </Link>
       </div>
     </div>
   );
