@@ -618,37 +618,247 @@
   margin-block: 0.5em;
 }
 
-.student-course-nav-bar-kid {
-  background-color: aquamarine;
-  padding: 10px;
-}
 
 .student-course-home-body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
 }
 
-.student-course-home-body .upcoming-exams {
-  flex-grow: 1;
+.student-course-home-body .upcoming-exams,
+.student-course-home-body .course-info {
+  flex: 1 1 50%;
+  min-height: 400px;
+}
+
+@media (max-width: 1000px) {
+
+  /* what do you want the breakpoint to be? */
+  .student-course-home-body {
+    flex-direction: column;
+  }
+
+  .student-course-home-body .upcoming-exams,
+  .student-course-home-body .course-info {
+    flex: 1 1 auto;
+    width: 85%;
+  }
+}
+
+/** Instructor Course Page **/
+.instructor-course-nav-bar {
+  background-color: var(--bport-green);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+}
+
+.instructor-course-nav-bar button {
+  color: white;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  padding-inline: 20px;
+  height: 100%;
+  width: auto;
+}
+
+.instructor-course-nav-bar .not-selected {
+  background-color: var(--bport-green);
+  transition: 0.5s;
+}
+
+.instructor-course-nav-bar .selected {
+  background-color: var(--shadow-color);
+  transition: 0.5s;
+}
+
+.instructor-course-nav-bar div p {
+  margin-block: 0.5em;
+}
+.instructor-course-home-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 70vw;
+  box-sizing: border-box;
+}
+
+.instructor-course-home-body .upcoming-exams-slider {
+  display: flex;
+  gap: 15px;
+  max-width: 100%;
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.instructor-course-home-body .upcoming-exams-slider div {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.instructor-course-home-body .bottom-elements-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+
+  .instructor-course-home-body .upcoming-exams-slider {
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 60vh;
+    scroll-behavior: smooth;
+    gap: 5px;
+  }
+
+  .instructor-course-home-body .upcoming-exams-slider div {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .instructor-course-home-body .bottom-elements-container {
+    flex-direction: column;
+  }
+
+  .instructor-course-home-body .bottom-elements-container>div {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+}
+
+#instructor-edit-course-button {
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--bport-gold);
+  text-align: left;
+  margin-top: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px var(--text-shadow-color);
+  outline: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-sizing: border-box;
+}
+
+#instructor-edit-course-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.instructor-edit-course-container {
+  width: 40%;
+}
+
+.instructor-course-home-body .upcoming-exams {
+  width: 100%;
+}
+
+.instructor-course-home-body .course-info {
   width: 50%;
 }
 
-.student-course-home-body .course-info {
-  flex-grow: 1;
+/** Instructor Course Home Exams List **/
+
+#instructor-create-exam-button,
+#instructor-manage-enrollment-button {
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--bport-gold);
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0px 4px 6px var(--text-shadow-color);
+  outline: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-sizing: border-box;
 }
+
+#instructor-create-exam-button:active,
+#instructor-manage-enrollment-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.instructor-exam-list-item .instructor-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 10px;
+}
+
+.instructor-actions button {
+  border-radius: 25px;
+  transform: translateY(-3px);
+  border: 0;
+  padding: 5px 20px;
+  font-size: 1rem;
+  transition: 0.1s;
+}
+
+.instructor-actions .active:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.1s;
+
+}
+
+.instructor-course-exams .instructor-course-exams-top, 
+.instructor-course-students .instructor-course-students-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.instructor-course-exams .instructor-course-exams-top div,
+.instructor-course-students .instructor-course-students-top div {
+  flex: 1; 
+  float: right;
+  max-width: 20%;
+  box-sizing: border-box; 
+  padding: 10px; 
+}
+
 
 /** Exam Components **/
 .exam-slide {
   background-color: white;
   border-style: solid;
-  border-color: black;
+  border-color: grey;
   border-width: 0.5px;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 15px;
   padding: 10px;
+  width: 90%;
 }
 
 .exam-slide p {
@@ -658,7 +868,260 @@
 
 .exam-slide-box {
   overflow-y: scroll;
-  height: 400px;
+  height: 375px;
+  width: 100%;
+}
+
+.student-course-exams {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 400px;
+}
+
+.student-course-exams h3 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.student-exam-list {
+  min-height: 350px;
+  margin: 10px;
+  padding: 5px;
+  background-color: var(--shadow-color);
+  border-radius: 5px;
+}
+
+.student-exam-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.student-exam-list-header>div {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.student-exam-list-header>div:nth-child(1) {
+  flex: 1;
+}
+
+.student-exam-list-header>div:nth-child(2) {
+  flex: 1.5;
+}
+
+.student-exam-list-header>div:nth-child(3) {
+  flex: .75;
+}
+
+.student-exam-list-header>div:nth-child(4) {
+  flex: 1.5;
+}
+
+.student-exam-list-body {
+  width: 100%;
+  max-height: 330px;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+.student-exam-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-color: var(--shadow-color);
+  border-bottom-width: 0.25;
+}
+
+.student-exam-list-item>div {
+  flex: 1;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.student-exam-list-item>div:nth-child(1) {
+  flex: 1;
+  color: var(--bport-green);
+  font-weight: bolder;
+}
+
+.student-exam-list-item>div:nth-child(2) {
+  flex: 1.5;
+}
+
+.student-exam-list-item>div:nth-child(3) {
+  flex: .75;
+}
+
+.student-exam-list-item>div:nth-child(4) {
+  flex: 1.5;
+}
+
+.student-exam-list-item .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.student-exam-list-item .actions button {
+  background-color: var(--shadow-color);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  flex: 1;
+  text-align: center;
+}
+
+.student-exam-list-item .actions button .inactive {
+  opacity: 0.15;
+}
+
+.instructor-course-exams,
+.instructor-course-students {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructor-course-exams h3,
+.instructor-course-students h3 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.instructor-exam-list,
+.instructor-student-list {
+  min-height: 350px;
+  margin: 10px;
+  padding: 5px;
+  background-color: var(--shadow-color);
+  border-radius: 5px;
+}
+
+.instructor-exam-list-header,
+.instructor-student-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.instructor-exam-list-header > div,
+.instructor-student-list-header > div {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.instructor-exam-list-header>div:nth-child(1) {
+  flex: 1;
+}
+
+.instructor-exam-list-header>div:nth-child(2) {
+  flex: 1.5;
+}
+
+.instructor-exam-list-header>div:nth-child(3) {
+  flex: .75;
+}
+
+.instructor-exam-list-header>div:nth-child(4) {
+  flex: 1.5;
+}
+
+.instructor-exam-list-body,
+.instructor-student-list-body {
+  width: 100%;
+  max-height: 330px;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+.instructor-exam-list-item,
+.instructor-student-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-color: var(--shadow-color);
+  border-bottom-width: 0.25;
+}
+
+.instructor-exam-list-item>div,
+.instructor-student-list-item> div {
+  flex: 1;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.instructor-exam-list-item>div:nth-child(1) {
+  flex: 1;
+  color: var(--bport-green);
+  font-weight: bolder;
+}
+
+.instructor-exam-list-item>div:nth-child(2) {
+  flex: 1.5;
+}
+
+.instructor-exam-list-item>div:nth-child(3) {
+  flex: 1;
+}
+
+.instructor-exam-list-item>div:nth-child(4) {
+  flex: 1.25;
+}
+
+.instructor-exam-list-item .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.instructor-exam-list-item .actions button {
+  background-color: var(--shadow-color);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  flex: 1;
+  text-align: center;
+}
+
+.instructor-exam-list-item .actions button .inactive {
+  opacity: 0.15;
 }
 
 /** Instructor Add Course **/
@@ -1102,4 +1565,3 @@
     flex-grow: 1;
     width: calc(100vw - 50px);
   }
-}

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import "./component-style.css";
-import ExamSlide from "./DashboardCourseCard";
+import "../../components/component-style.css";
+import ExamSlide from "../../components/DashboardCourseCard";
 
 const StudentCourseHome = () => {
   return (
@@ -23,9 +23,10 @@ const StudentCourseHome = () => {
         <h3>Course Information</h3>
         <br />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic ad, obcaecati nobis
-          eius voluptatum ducimus laboriosam. Quam commodi nostrum voluptatibus perferendis
-          cupiditate tempora illo iusto modi assumenda. Laborum, corporis.
+          Prerequisites: MTH 111 or higher. Covers the fundamental of computer problem solving and programming. 
+          Includes these topics: program development process, programming methodologies, language translation phases, 
+          Java programming (data types, variables, expressions, assignment, selection, iteration, methods, parameter passing and I/O), 
+          secure coding techniques and ethical, legal and social issues of computing.
         </p>
       </div>
     </div>
