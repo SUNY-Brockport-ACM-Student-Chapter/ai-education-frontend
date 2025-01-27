@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
 import Header from "../../../components/Header";
+import ManageInstructorPanel from "./components/manage-instructors-panel"
+import ManageStudentsPanel from "./components/manage-students-panel"
 
 const Page: React.FC = () => {
   const pageTitle = "Manage Users";
@@ -11,10 +13,10 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
+        <ManageInstructorPanel></ManageInstructorPanel>
+        <ManageStudentsPanel></ManageStudentsPanel>
         <p>
-          To add: Manage Students and Manage Instructors panels. See figma for design. Also, popup
-          for confirm setting instructor as admin. Maybe keep these components in this Manage User
-          page folder?
+          To add: Popups for setting inactive and admin, fix forms into proper get/post
         </p>
       </div>
     </div>

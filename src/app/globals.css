@@ -24,6 +24,8 @@
   --tint-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.25);
   --text-shadow-color: rgba(0, 0, 0, 0.5);
+
+  --inter: "Inter"
   font-size: 15px;
 }
 
