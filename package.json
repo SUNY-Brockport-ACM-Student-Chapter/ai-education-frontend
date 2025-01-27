@@ -11,6 +11,8 @@
     "prettier:check": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^5.1.6",
+    "@clerk/nextjs": "^6.9.9",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
@@ -18,8 +20,8 @@
     "next": "^14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "reactjs-popup": "^2.0.6",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^6.28.0",
+    "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
     "@types/node": "^20",

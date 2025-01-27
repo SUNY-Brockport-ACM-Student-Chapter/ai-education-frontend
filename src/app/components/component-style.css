@@ -195,7 +195,8 @@
   width: 100vw;
   height: 100vw;
   filter: blur(5px);
-  z-index: 5; /* Ensure the blur is behind the content */
+  z-index: 5;
+  /* Ensure the blur is behind the content */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,8 +336,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Dimmed background */
-  backdrop-filter: blur(5px); /* Blurred effect */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Dimmed background */
+  backdrop-filter: blur(5px);
+  /* Blurred effect */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,13 +432,16 @@
 }
 
 .sidebar-nav .logo-section {
-  width: calc(100% - 40px);
-  margin: 15px;
+  width: calc(100% - 30px);
+  margin: 9px 10px 12px 10px;
   padding: 10px 5px;
   text-align: center;
-  background-color: var(--tint-color);
-  border-radius: 5px;
-  box-shadow: 0px 5px 7px var(--shadow-color);
+  background: linear-gradient(to bottom, var(--bp-greenL), var(--bport-green));
+  box-shadow:
+    0 5px 7px var(--shadow-color),
+    0px 1px 1px inset rgba(255, 255, 255, 0.1);
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .sidebar-nav .logo-section a {
@@ -448,7 +454,9 @@
   padding: 0 25px 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 15px var(--shadow-color) inset;
+  box-shadow:
+    0 0 15px var(--shadow-color) inset,
+    0px 1px 5px rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-nav .settings-section {
@@ -466,7 +474,7 @@
   margin-top: 25px;
   background-color: transparent;
   border: 0;
-  border-radius: 5px;
+  border-radius: 25px;
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -480,30 +488,22 @@
 }
 
 .nav-button:hover {
-  background-color: var(--tint-color);
-  box-shadow: 0 5px 7px var(--shadow-color);
+  background: linear-gradient(to bottom, var(--bp-greenL), var(--bport-green));
+  box-shadow:
+    0 5px 7px var(--shadow-color),
+    0px 1px 1px inset rgba(255, 255, 255, 0.1);
   transition: 0.1s;
 }
 
 .nav-button:active {
-  background-color: var(--bport-gold);
+  background: linear-gradient(to bottom, var(--bport-green), var(--bp-greenD));
+  box-shadow:
+    0 5px 7px var(--shadow-color) inset,
+    0px 1px 1px rgba(255, 255, 255, 0.1);
+  transition: 0.1s;
 }
 
 .mobile-settings-button {
-  display: none;
-}
-
-.mobile-profile-icon {
-  background-color: var(--bport-secondary-green1);
-  border-radius: 5px;
-  padding: 2px 3px 0px 1px;
-  width: 40px;
-  height: 40px;
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  transition: 0.5s;
   display: none;
 }
 
@@ -518,7 +518,7 @@
 }
 
 .burger-bar-dropdown i {
-  font-size: 2.25rem;
+  font-size: 3rem;
   padding-top: 2px;
   width: auto;
 }
@@ -577,6 +577,7 @@
   align-items: center;
   padding: 0 15px;
   transition: 0.25s;
+  margin-right: 15px;
 }
 
 /** Student Course Components **/
@@ -661,19 +662,23 @@
 }
 
 /** Media Queries **/
-@media screen and (max-width: 1505px) {
-  .profile-text {
-    display: none;
+@media screen and (max-width: 1265px) {
+  .sidebar-nav .logo-section {
+    margin: 0;
+    width: 100%;
+    padding: 7px 25px 10px;
   }
 
   .nav-button {
     text-align: center;
     padding: 15px 15px;
+    width: 90%;
   }
 
   .sidebar-nav .menu-section {
     padding: 0px 0px 25px 0px;
     width: 100%;
+    align-items: center;
   }
 
   .sidebar-nav i {
@@ -687,14 +692,11 @@
     width: 100vw;
     height: auto;
     position: fixed;
+    text-shadow: 0px 3px 3px var(--text-shadow-color);
   }
 
   .sidebar-nav i {
     display: inline;
-  }
-
-  .nav-button {
-    margin: 0;
   }
 
   .sidebar-nav .logo-section {
@@ -728,7 +730,7 @@
       visibility 0.3s ease-out;
     border-radius: 0px 0px 15px 15px;
     align-self: center;
-    margin-top: 70px;
+    margin-top: 71px;
     visibility: hidden;
   }
 
@@ -801,9 +803,5 @@
     height: calc(100vh - 180px);
     flex-grow: 1;
     width: calc(100vw - 50px);
-  }
-
-  .profile-icon {
-    display: none;
   }
 }

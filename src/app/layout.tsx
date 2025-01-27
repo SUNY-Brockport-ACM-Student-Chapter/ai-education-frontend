@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import dynamic from "next/dynamic";
+import { ClerkProvider } from "@clerk/nextjs";
 
 config.autoAddCss = false;
 
@@ -33,10 +34,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en">
       <body className={inter.className}>
-        <UserProviderClient userName={userName}>
-          <NavMenu />
-          <main className="main-content">{children}</main>
-        </UserProviderClient>
+        <ClerkProvider>
+          <UserProviderClient userName={userName}>
+            <NavMenu />
+            <main className="main-content">{children}</main>
+          </UserProviderClient>
+        </ClerkProvider>
       </body>
     </html>
   );
