@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ProfileIcon from "./ProfileIcon";
 import { useUser } from "../utils/UserContext";
 import "./component-style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SignedIn } from "@clerk/nextjs";
 
 const NavMenu: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -51,56 +51,53 @@ const NavMenu: React.FC = () => {
   const settingsLink = navLinks.find((link) => link.label === "Settings");
 
   return (
-    <nav className="sidebar-nav">
-      <div className="logo-section">
-        <ProfileIcon initials={userInitials} className="mobile-profile-icon" />
-
-        <Link href="/">
-          <h1>EduAlly</h1>
-        </Link>
-
-        <label className="burger-bar-dropdown">
-          <input type="checkbox" checked={menuVisible} onChange={toggleMenu} />
-          <i className="fas fa-bars"></i>
-        </label>
-      </div>
-
-      <div className={`menu-section nav-section ${menuVisible || !isMobile ? "visible" : ""}`}>
-        {navLinks.map(
-          (link, index) =>
-            // Skip Settings in the main menu section for non-mobile
-            link.label !== "Settings" && (
-              <Link href={link.href} key={index}>
-                <button className="nav-button">
-                  <i className={`fas ${link.icon}`}></i>
-                  {link.label}
-                </button>
-              </Link>
-            ),
-        )}
-        {/* Show Settings button in main section only for mobile */}
-        {isMobile && settingsLink && (
-          <Link href={settingsLink.href}>
-            <button className="nav-button mobile-settings-button">
-              <i className={`fas ${settingsLink.icon}`}></i>
-              {settingsLink.label}
-            </button>
-          </Link>
-        )}
-      </div>
-
-      {/* Settings section for non-mobile view */}
-      {!isMobile && settingsLink && (
-        <div className="settings-section nav-section">
-          <Link href={settingsLink.href}>
-            <button className="nav-button">
-              <i className={`fas ${settingsLink.icon}`}></i>
-              {settingsLink.label}
-            </button>
-          </Link>
+    <SignedIn>
+      <nav className="sidebar-nav">
+        <div className="logo-section">
+          EduAlly
+          <label className="burger-bar-dropdown">
+            <input type="checkbox" checked={menuVisible} onChange={toggleMenu} />
+            <i className="fas fa-bars"></i>
+          </label>
         </div>
-      )}
-    </nav>
+
+        <div className={`menu-section nav-section ${menuVisible || !isMobile ? "visible" : ""}`}>
+          {navLinks.map(
+            (link, index) =>
+              // Skip Settings in the main menu section for non-mobile
+              link.label !== "Settings" && (
+                <Link href={link.href} key={index}>
+                  <button className="nav-button">
+                    <i className={`fas ${link.icon}`}></i>
+                    {link.label}
+                  </button>
+                </Link>
+              ),
+          )}
+          {/* Show Settings button in main section only for mobile */}
+          {isMobile && settingsLink && (
+            <Link href={settingsLink.href}>
+              <button className="nav-button mobile-settings-button">
+                <i className={`fas ${settingsLink.icon}`}></i>
+                {settingsLink.label}
+              </button>
+            </Link>
+          )}
+        </div>
+
+        {/* Settings section for non-mobile view */}
+        {!isMobile && settingsLink && (
+          <div className="settings-section nav-section">
+            <Link href={settingsLink.href}>
+              <button className="nav-button">
+                <i className={`fas ${settingsLink.icon}`}></i>
+                {settingsLink.label}
+              </button>
+            </Link>
+          </div>
+        )}
+      </nav>
+    </SignedIn>
   );
 };
 
