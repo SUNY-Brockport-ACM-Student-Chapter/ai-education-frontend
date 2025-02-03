@@ -1,0 +1,243 @@
+/** Base Components **/
+.prevnext-buttonbox {
+    width: 300px;
+    height: 150px;
+    background-color: var(--shadow-color);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .prevnext-buttonbox button {
+    font-family: var(--font-default);
+    font-size: 28px;
+    color: var(--font-colorL);
+    background-color: var(--green-base);
+    width: 40%;
+    height: 70px;
+    border-radius: 15px;
+    border: 0;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .prevnext-buttonbox button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px var(--shadow-color);
+    transition: 0.25s;
+  }
+  
+  .prevnext-buttonbox button:active {
+    background-color: var(--gold-base);
+  }
+  
+  .prevnext-buttonbox button.end-review {
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .prevnext-buttonbox button.end-review.button-hide {
+    display: none;
+  }
+  
+  .button-invalid {
+    opacity: 25%;
+  }
+  
+  .button-hide {
+    display: none;
+  }
+  
+  /** Question Components **/
+  .question-list-box {
+    width: 250px;
+    height: 500px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: var(--shadow-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 10px var(--shadow-color);
+  }
+  
+  .qlist-card-box {
+    border: 2px solid var(--shadow-color);
+    border-radius: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+    height: 80%;
+    overflow-y: scroll;
+  }
+  
+  .qcard {
+    width: 30%;
+    height: 90px;
+    background-color: var(--green-base);
+    border-radius: 15px;
+    display: inline-block;
+    color: var(--font-colorL);
+    font-size: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.15s;
+    user-select: none;
+  }
+  
+  .qcard:hover {
+    box-shadow: 0 5px 0px var(--shadow-color);
+    transform: translateY(-5px);
+    transition: 0.15s;
+  }
+  
+  .qcard:active {
+    box-shadow: 0 5px 0px inset var(--shadow-color);
+    background-color: var(--sec-gold);
+    transform: translateY(0px);
+    transition: 0.15s;
+  }
+  
+  .qcardCompletionbox {
+    width: 50%;
+    height: 50%;
+  }
+  
+  .qlist-progressbar {
+    width: 100%;
+    height: 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    background-color: var(--green-base);
+    justify-self: flex-end;
+  }
+  
+  /** Exam Page Info Box Styling **/
+  .exampage-infobox {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .exampage-infobox h4 {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  .exampage-infobox-desc {
+    border: solid, 2px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: scroll;
+    box-shadow: 0 5px 0px var(--shadow-color);
+  }
+  
+  .exampage-infobox-dates {
+    color: grey;
+    line-height: 8px;
+  }
+  
+  /** Exam Page Buttons **/
+  .exam-buttonbox {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .exam-buttonbox button {
+    margin: auto;
+    font-family: var(--font-default);
+    font-size: 28px;
+    color: var(--font-colorL);
+    background-color: var(--green-base);
+    height: 60px;
+    border-radius: 15px;
+    border: 0;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .exam-buttonbox button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px var(--shadow-color);
+    transition: 0.25s;
+  }
+
+  .exam-buttonbox button.ai-review {
+    background-color: var(--sec-gold);
+  }
+  
+  .exam-buttonbox button:active {
+    background-color: var(--gold-base);
+  }
+  
+  .exam-buttonbox button.hide {
+    display: none;
+  }
+  
+  /** Exam Questions Buttons **/
+  .exam-questionbox {
+    font-size: 20px;
+    width: 600px;
+    padding-right: 100px;
+    margin-right: auto;
+  }
+  
+  .question-textbox textarea {
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: start;
+    border: 0.1px solid grey;
+    resize: none;
+  }
+  
+  .question-textbox textarea:hover {
+    border: 2px solid grey;
+  }
+  
+  /** Feedback **/
+  .exam-aifeedback input {
+    accent-color: red;
+  }
+  
+  .feedback-textbox textarea {
+    max-height: 150px;
+    overflow-y: scroll;
+    width: 600px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: start;
+    border: 0.1px solid grey;
+    resize: none;
+  }
+  
+  /** Navigation **/
+  .confirm-cancel-buttons button:active {
+    background-color: var(--sec-gold);
+  }

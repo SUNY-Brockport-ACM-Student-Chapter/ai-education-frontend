@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./page.module.css";
-import Header from "../../components/Header";
+import Header from "../../components/Nav-Header/Header";
 
-import PrevNext from "@/app/components/PrevNext";
-import CourseList from "@/app/components/DashboardCourseList";
+import PrevNext from "@/app/components/Exam-Components/PrevNext";
+import CourseList from "@/app/components/Dashboard-Sliders/DashboardCourseList";
 import Link from "next/link";
 
 const Page: React.FC = () => {

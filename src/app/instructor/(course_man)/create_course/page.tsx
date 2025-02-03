@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import Header from "../../../components/Header";
-import AddCourseScreen from "./AddCourseScreen";
+import Header from "../../../components/Nav-Header/Header";
+import AddCourseScreen from "../../../components/Add-Modify-Course/AddCourseScreen";
 
 const Page: React.FC = () => {
   const pageTitle = "Create Course";

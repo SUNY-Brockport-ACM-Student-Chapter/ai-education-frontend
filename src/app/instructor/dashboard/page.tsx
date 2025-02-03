@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./page.module.css";
-import Header from "../../components/Header";
+import Header from "../../components/Nav-Header/Header";
 import Link from "next/link";
 
 const Page: React.FC = () => {

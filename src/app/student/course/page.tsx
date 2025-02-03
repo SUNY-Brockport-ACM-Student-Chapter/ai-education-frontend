@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import Header from "../../components/Header";
-import StudentCourseNavBar from "./StudentCourseNavBar";
+import Header from "../../components/Nav-Header/Header";
+import StudentCourseNavBar from "../../components/Course-Page-Components/Student/StudentCourseNavBar";
 
 const Page = () => {
   const pageTitle = "Introduction to Computing";

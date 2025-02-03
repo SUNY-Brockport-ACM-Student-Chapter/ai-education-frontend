@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import Header from "../../../components/Header";
-import PopupWrapper from "../../../components/PopupWrapper";
+import Header from "../../../components/Nav-Header/Header";
+import PopupWrapper from "../../../components/Popup-Components/PopupWrapper";
 
 import Link from "next/link";
 import Popup from "reactjs-popup";

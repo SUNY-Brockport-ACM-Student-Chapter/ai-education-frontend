@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./page.module.css";
-import Header from "../../../components/Header";
+import Header from "../../../components/Nav-Header/Header";
 import Link from "next/link";
-import PrevNext from "../../../components/PrevNext";
-import ExamPageInfoBox from "../../../components/ExamPageInfoBox";
-import ExamPageButtons from "../../../components/ExamPageButtons";
-import ExamQuestion from "../../../components/ExamQuestion";
-import QuestionList from "../../../components/QuestionList";
-import ExamAIFeedback from "../../../components/ExamAIFeedback";
+import PrevNext from "../../../components/Exam-Components/PrevNext";
+import ExamPageInfoBox from "../../../components/Exam-Components/ExamPageInfoBox";
+import ExamPageButtons from "../../../components/Exam-Components/ExamPageButtons";
+import ExamQuestion from "../../../components/Exam-Components/ExamQuestion";
+import QuestionList from "../../../components/Exam-Components/QuestionList";
+import ExamAIFeedback from "../../../components/Exam-Components/ExamAIFeedback";
 
 const Page: React.FC = () => {
   const pageTitle = "AI Review";

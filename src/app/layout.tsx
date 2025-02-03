@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "AI-powered education assistant",
 };
 
-const NavMenu = dynamic(() => import("./components/NavMenu"), { ssr: false });
+const NavMenu = dynamic(() => import("./components/Nav-Header/NavMenu"), { ssr: false });
 const UserProviderClient = dynamic(
   () => import("./utils/UserContext").then((mod) => mod.UserProvider),
   { ssr: false },
