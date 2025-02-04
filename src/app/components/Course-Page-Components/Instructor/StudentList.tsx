@@ -1,81 +1,30 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "../course-page-components.css";
-import Link from "next/link";
 import StudentListItem from "./StudentListItem";
 
 const StudentList = () => {
+  const students = [
+    { name: "Trinity Thiele", email: "tthie1@brockport.edu" },
+    { name: "Tyler Jones", email: "tjones@brockport.edu" },
+    { name: "Naya Brown", email: "nbrown@brockport.edu" },
+    { name: "Jayden Asbie", email: "jasbie@brockport.edu" },
+    { name: "Ryan Fantigrossi", email: "rfanti@brockport.edu" },
+  ];
+
   return (
-    <div className="instructor-student-list">
-      <div className="instructor-student-list-header">
-        <div> Student Name </div>
-        <div> Email </div>
+    <div className="student-list">
+      <div className="student-list-header">
+        <div>Student Name</div>
+        <div>Email</div>
       </div>
-      <div className="instructor-student-list-body">
-        <StudentListItem
-          name="Trinity Thiele"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Tyler Jones"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Naya Brown"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Jayden Asbie"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Ryan Fantigrossi"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Trinity Thiele"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Tyler Jones"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Naya Brown"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Jayden Asbie"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Ryan Fantigrossi"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Trinity Thiele"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Tyler Jones"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Naya Brown"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Jayden Asbie"
-          email="tthie1@brockport.edu"
-        />
-        <StudentListItem
-          name="Ryan Fantigrossi"
-          email="tthie1@brockport.edu"
-        />
+      <div className="student-list-body">
+        {students.map((student, index) => (
+          <StudentListItem key={index} name={student.name} email={student.email} />
+        ))}
       </div>
     </div>
-
   );
 };
 

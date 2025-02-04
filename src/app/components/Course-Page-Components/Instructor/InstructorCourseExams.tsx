@@ -1,27 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "../course-page-components.css";
-import ExamList from "./ExamList";
+import ExamList from "../ExamList"; // Using shared ExamList
 import Link from "next/link";
 
 const InstructorCourseExams = () => {
   return (
-    <div className="instructor-course-exams">
-      <div className="instructor-course-exams-top">
-        <div>
-          <h3>Exam List</h3>
-        </div>
-        <div>
-          <Link href="./create_exam" passHref>
-          <button id="instructor-create-exam-button">
-            <p>Create Exam</p>
-          </button>
-          </Link>
-        </div>
-
+    <div className="course-exams-page menu-panel">
+      <div className="course-action-header">
+        <h2>Exam List</h2>
+        <Link href="../../instructor/create_exam" passHref>
+          <button className="course-action-button gold">Create Exam</button>
+        </Link>
       </div>
-
       <ExamList />
     </div>
   );

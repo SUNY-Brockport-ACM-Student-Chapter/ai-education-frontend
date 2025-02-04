@@ -51,18 +51,18 @@
   /* Global Border Radius */
   --border-radius: 25px;
   --border-radius-textbox: 15px;
-  
+
   /* Shadow Colors */
   --shadow-color: rgba(0, 0, 0, 0.25);
   --text-shadow-color: rgba(0, 0, 0, 0.45);
-  
+
   /* Font Stuffs */
   font-size: 15px;
   --font-colorL: rgb(255, 255, 255);
   --font-colorM: rgb(41, 41, 41);
   --font-colorD: rgb(0, 0, 0);
   --font-defualt: "Inter", sans-serif;
-  
+
   /* Consistent Design */
   --border-radius: 25px;
 
@@ -121,16 +121,16 @@ i {
   padding-inline: 10px 20px;
 }
 
-
-.main-content { /* Everything but the Nav (includes Header) */
+.main-content {
+  /* Everything but the Nav (includes Header) */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: calc(100% - clamp(200px, 20vw, 350px));
 }
 
-
-.main-workspace { /* Everything but the Nav and Header */
+.main-workspace {
+  /* Everything but the Nav and Header */
   width: calc(100% - 50px);
   padding: 25px;
   box-shadow: 0 15px 15px -15px var(--shadow-color) inset;
@@ -143,7 +143,7 @@ i {
 }
 
 .menu-panel {
-  background: var(--gradient-gray);
+  background: var(--gradient-grayL);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   padding: 25px;
@@ -174,7 +174,6 @@ button:active {
   transform: translateY(1px);
   background: var(--gradient-grayD);
   box-shadow: var(--box-shadow-pressed);
-  text-shadow: 0 3px 3px var(--shadow-color);
 }
 
 button.green {

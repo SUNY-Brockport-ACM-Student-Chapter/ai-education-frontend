@@ -1,5 +1,5 @@
 import React from "react";
-import "./manage-users-page.css"
+import "./manage-users-page.css";
 
 const ManageInstructorPanel = () => {
   return (
@@ -8,17 +8,17 @@ const ManageInstructorPanel = () => {
 
       <div className="manage-users-searchbox">
         <input type="text" className="m-u-usersearch" />
-        <button className="m-u-usersearch-button">Search</button>
+        <button className="m-u-usersearch-button gold">Search</button>
       </div>
 
       <div className="manage-users-infoform">
         <form>
           <label htmlFor="">Name</label>
-          <input type="text" className="m-u-name"/>
-          <input type="text" className="m-u-name"/>
+          <input type="text" className="m-u-name" />
+          <input type="text" className="m-u-name" />
           <br />
           <label htmlFor="">Email</label>
-          <input type="text" className="m-u-email"/>
+          <input type="text" className="m-u-email" />
         </form>
       </div>
 

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
 import Header from "../../../components/Nav-Header/Header";
-import ManageInstructorPanel from "../../../components/Manage-Users-Page/manage-instructors-panel"
-import ManageStudentsPanel from "../../../components/Manage-Users-Page/manage-students-panel"
+import ManageInstructorPanel from "../../../components/Manage-Users-Page/manage-instructors-panel";
+import ManageStudentsPanel from "../../../components/Manage-Users-Page/manage-students-panel";
 
 const Page: React.FC = () => {
   const pageTitle = "Manage Users";
@@ -15,9 +15,7 @@ const Page: React.FC = () => {
         {/* Add your content within the main-workspace div */}
         <ManageInstructorPanel></ManageInstructorPanel>
         <ManageStudentsPanel></ManageStudentsPanel>
-        <p>
-          To add: Popups for setting inactive and admin, fix forms into proper get/post
-        </p>
+        <p>To add: Popups for setting inactive and admin, fix forms into proper get/post</p>
       </div>
     </div>
   );

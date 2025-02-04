@@ -1,32 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "../course-page-components.css";
-import ExamSlide from "../../Dashboard-Sliders/DashboardCourseCard";
+import CourseExamCard from "../CourseExamCard"; // Using the shared exam card component
 
 const StudentCourseHome = () => {
   return (
-    <div className="student-course-home-body">
+    <div className="course-home-body">
       <div className="menu-panel upcoming-exams">
         <h3>Upcoming Exams</h3>
-        <br />
         <div className="exam-slide-box">
-          <ExamSlide />
-          <ExamSlide />
-          <ExamSlide />
-          <ExamSlide />
-          <ExamSlide />
-          <ExamSlide />
+          <CourseExamCard />
+          <CourseExamCard />
+          <CourseExamCard />
+          <CourseExamCard />
         </div>
       </div>
       <div className="menu-panel course-info">
         <h3>Course Information</h3>
-        <br />
         <p>
-          Prerequisites: MTH 111 or higher. Covers the fundamental of computer problem solving and programming. 
-          Includes these topics: program development process, programming methodologies, language translation phases, 
-          Java programming (data types, variables, expressions, assignment, selection, iteration, methods, parameter passing and I/O), 
-          secure coding techniques and ethical, legal and social issues of computing.
+          Prerequisites: MTH 111 or higher. Covers the fundamentals of computer problem solving and
+          programming. Includes these topics: program development process, programming
+          methodologies, language translation phases, Java programming (data types, variables,
+          expressions, assignment, selection, iteration, methods, parameter passing, and I/O),
+          secure coding techniques, and ethical, legal, and social issues of computing.
         </p>
       </div>
     </div>

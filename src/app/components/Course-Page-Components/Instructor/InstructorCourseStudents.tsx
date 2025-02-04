@@ -1,26 +1,18 @@
-
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "../course-page-components.css";
 import Link from "next/link";
 import StudentList from "./StudentList";
 
 const InstructorCourseStudents = () => {
   return (
-    <div className="instructor-course-students">
-      <div className="instructor-course-students-top">
-        <div>
-          <h3>Student List</h3>
-        </div>
-        <div>
-          <Link href="./manage_enrollment" passHref>
-            <button id="instructor-manage-enrollment-button">
-              <p>Manage Enrollment</p>
-            </button>
-          </Link>
-        </div>
-        
+    <div className="course-students-page menu-panel">
+      <div className="course-action-header">
+        <h2>Student List</h2>
+        <Link href="./manage_enrollment" passHref>
+          <button className="course-action-button gold">Manage Enrollment</button>
+        </Link>
       </div>
       <StudentList />
     </div>

@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "../course-page-components.css";
-import ExamList from "../Instructor/ExamList";
-import Link from "next/link";
+import ExamList from "../ExamList"; // Using the shared ExamList component
 
 const StudentCourseExams = () => {
   return (

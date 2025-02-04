@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Header from "../../components/Nav-Header/Header";
-import StudentCourseNavBar from "../../components/Course-Page-Components/Student/StudentCourseNavBar";
+import CourseNavBar from "../../components/Course-Page-Components/CourseNavBar";
 
 const Page = () => {
   const pageTitle = "Introduction to Computing";
@@ -10,7 +10,7 @@ const Page = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/** Add your content within the main-workspace div */}
-        <StudentCourseNavBar />
+        <CourseNavBar />
       </div>
     </div>
   );

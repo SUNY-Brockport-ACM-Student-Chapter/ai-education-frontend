@@ -57,7 +57,9 @@ const ModifyCourseScreen = () => {
             onChange={handleCourseCRNChange}
             style={{ borderColor: isCRNValid ? "initial" : "red" }}
           />
-          {!isCRNValid && <p style={{ color: "red", marginTop: "5px" }}>CRN must be four numbers.</p>}
+          {!isCRNValid && (
+            <p style={{ color: "red", marginTop: "5px" }}>CRN must be four numbers.</p>
+          )}
         </div>
         <div className="course-panel">
           <h3>Course Description</h3>
@@ -75,16 +77,9 @@ const ModifyCourseScreen = () => {
         </div>
         <div className="course-panel">
           <h3>Course Start/End Dates</h3>
-          <input
-            type="date"
-            onChange={handleStartDateChange}
-            min={startDate}
-          />
+          <input type="date" onChange={handleStartDateChange} min={startDate} />
           <span>-</span>
-          <input
-            type="date"
-            min={endDateMin}
-          />
+          <input type="date" min={endDateMin} />
         </div>
       </div>
       <div className="course-buttons">

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 interface StudentListItemProps {
   name: string;
@@ -8,7 +7,7 @@ interface StudentListItemProps {
 
 const StudentListItem: React.FC<StudentListItemProps> = ({ name, email }) => {
   return (
-    <div className="instructor-student-list-item">
+    <div className="student-list-item">
       <div>{name}</div>
       <div>{email}</div>
     </div>

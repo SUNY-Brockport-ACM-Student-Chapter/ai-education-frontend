@@ -5,7 +5,7 @@ import "./dashboard-sliders.css";
 
 const DashboardCourseCard = () => {
   return (
-    <div className="exam-slide">
+    <div className="ecard">
       <h3>Exam Title</h3>
       <br />
       <p>Course Title</p>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Header from "../../components/Nav-Header/Header";
 import Link from "next/link";
-import InstructorCourseNavBar from "../../components/Course-Page-Components/Instructor/InstructorCourseNavBar";
+import CourseNavBar from "../../components/Course-Page-Components/CourseNavBar";
 
 const Page: React.FC = () => {
   const pageTitle = "Intro to Computing";
@@ -12,7 +12,7 @@ const Page: React.FC = () => {
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
-        <InstructorCourseNavBar />
+        <CourseNavBar />
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
+        <h1>currently the popup test site</h1>
         <PopupWrapper redirectTo="../course">
           <Link href="../course">Back to Course</Link>
         </PopupWrapper>
