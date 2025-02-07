@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import Header from "../../../components/Nav-Header/Header";
+import AddExamScreen from "../../../components/Add-Modify-Exam/AddExamScreen";
 
 const Page: React.FC = () => {
   const pageTitle = "Create Exam";
@@ -11,14 +12,14 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
-        <p>
-          To Add: Multiple views, keep each view component in a folder called Components or Views in
+        <AddExamScreen />
+        
+          {/* To Add: Multiple views, keep each view component in a folder called Components or Views in
           this create_exam folder. One view is for exam details (see figma), next view is for add
           question with list of created questions on the side for looking through them. (see figma),
           final view is the confirmation similar to the intro screen to taking an exam, but "save
           exam" is the continue option, and a go back button. on saving exam, popup confirming that
-          the questions CANNOT be changed after saving. returns user to exam list.
-        </p>
+          the questions CANNOT be changed after saving. returns user to exam list. */}
       </div>
     </div>
   );

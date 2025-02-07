@@ -1,0 +1,47 @@
+.instructor-add-exam menu-panel {}
+
+.instructor-add-exam input[type="text"],
+.instructor-add-exam input[type="date"],
+.instructor-add-exam textarea {
+    width: 100%;
+    background-color: var(--font-colorL);
+    color: var(--font-colorD);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: var(--border-radius-textbox);
+    box-sizing: border-box;
+    font-family: var(--font-default);
+}
+
+.add-exam-first-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.add-exam-second-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.bottom-buttons {
+    text-align: right;
+    padding-right: 20px;
+    background-color: beige;
+}
+.add-exam-third-row {}
+
+.add-exam-name {}
+
+.add-exam-course {}
+
+.add-exam-start-date {}
+
+.add-exam-end-date {}
+
+.add-exam-exam-description {}
