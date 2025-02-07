@@ -1,43 +1,32 @@
 /** Base Components **/
 .prevnext-buttonbox {
   width: 300px;
-  height: 150px;
+  border-radius: var(--border-radius);
+  padding-block: 15px;
   background-color: var(--shadow-color);
-  border-radius: 15px;
+  box-shadow: var(--box-shadow-pressed);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  row-gap: 5px;
 }
 
 .prevnext-buttonbox button {
   font-family: var(--font-default);
-  font-size: 28px;
+  font-size: 25px;
   color: var(--font-colorL);
-  background-color: var(--green-base);
   width: 40%;
   height: 70px;
-  border-radius: 15px;
-  border: 0;
-  transition: 0.25s;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.prevnext-buttonbox button:hover {
-  cursor: pointer;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 5px var(--shadow-color);
-  transition: 0.25s;
-}
-
-.prevnext-buttonbox button:active {
-  background-color: var(--gold-base);
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
 }
 
 .prevnext-buttonbox button.end-review {
-  width: 100%;
+  min-width: 100%;
   display: inline-block;
 }
 
@@ -55,8 +44,8 @@
 
 /** Question Components **/
 .question-list-box {
-  width: 250px;
-  height: 500px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +53,7 @@
 
 .qlist-card-box {
   border: 2px solid var(--shadow-color);
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   flex-wrap: wrap;
   padding: 15px;
   flex-direction: row;
@@ -72,15 +61,15 @@
   justify-content: space-around;
   align-items: flex-start;
   gap: 10px;
-  height: 80%;
+  height: 50%;
   overflow-y: scroll;
 }
 
 .qcard {
-  width: 30%;
+  width: 20%;
   height: 90px;
-  background-color: var(--green-base);
-  border-radius: 15px;
+  background: var(--gradient-green);
+  border-radius: var(--border-radius);
   display: inline-block;
   color: var(--font-colorL);
   font-size: 28px;
@@ -94,13 +83,13 @@
 }
 
 .qcard:hover {
-  box-shadow: 0 5px 0px var(--shadow-color);
+  box-shadow: var(--box-shadow);
   transform: translateY(-5px);
   transition: 0.15s;
 }
 
 .qcard:active {
-  box-shadow: 0 5px 0px inset var(--shadow-color);
+  box-shadow: var(--box-shadow-pressed);
   background-color: var(--sec-gold);
   transform: translateY(0px);
   transition: 0.15s;
@@ -197,18 +186,20 @@
 /** Exam Questions Buttons **/
 .exam-questionbox {
   font-size: 20px;
-  width: 100%;
-  max-width: 500px;
+  width: calc(100% - 15px);
+  max-width: 5000px;
 }
 
 .question-textbox textarea {
-  height: 400px;
-  width: 100%;
+  height: 15rem;
+  min-width: 100%;
   border-radius: 10px;
   font-size: 20px;
   text-align: start;
   border: 0.1px solid grey;
   resize: none;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .question-textbox textarea:hover {
@@ -217,21 +208,49 @@
 
 /** Feedback **/
 .exam-aifeedback input {
-  accent-color: red;
-  max-width: 500px;
+  max-width: 5000px;
 }
 
 .feedback-textbox textarea {
   max-height: 150px;
   overflow-y: scroll;
-  width: 100%;
+  width:  calc(100% - 5px);
   border-radius: 10px;
   font-size: 20px;
   text-align: start;
   border: 0.1px solid grey;
+  resize: vertical;
+  height: 15rem;
+  margin-bottom: 15px;
+  padding-block: 15px;
 }
 
 /** Navigation **/
 .confirm-cancel-buttons button:active {
   background-color: var(--sec-gold);
+}
+
+/* Add your page-specific css here.*/
+
+.question-pages {
+  display: flex;
+  width: calc(100% - 25px);
+  height: calc(100% - 50px);
+  margin: -25px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.exam-question-questionbox {
+  width: 500px;
+  height: 100%;
+  flex-grow: 1;
+  padding-bottom: 15px;
+}
+
+.exam-question-info {
+  width: 300px;
+  height: calc(100%);
 }
