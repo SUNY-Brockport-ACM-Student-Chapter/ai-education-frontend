@@ -214,7 +214,7 @@
 .feedback-textbox textarea {
   max-height: 150px;
   overflow-y: scroll;
-  width:  calc(100% - 5px);
+  width: calc(100% - 5px);
   border-radius: 10px;
   font-size: 20px;
   text-align: start;

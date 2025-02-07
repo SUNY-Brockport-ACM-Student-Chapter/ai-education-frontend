@@ -21,8 +21,10 @@ const Page: React.FC = () => {
               questionNum={2}
               question="What is the difference between supervised, unsupervised, and reinforcement learning?"
             />
-            <ExamAIFeedback questionFeedback="Your response is on the right track, but try to focus more on what makes each type of learning distinct. Think about how they handle data differently—does the model get clear answers to learn from, or does it have to find patterns on its own? Also, consider how the learning process works in each case. Refining these points will make your explanation clearer and more complete."
-            agreementToggle={false} />
+            <ExamAIFeedback
+              questionFeedback="Your response is on the right track, but try to focus more on what makes each type of learning distinct. Think about how they handle data differently—does the model get clear answers to learn from, or does it have to find patterns on its own? Also, consider how the learning process works in each case. Refining these points will make your explanation clearer and more complete."
+              agreementToggle={false}
+            />
           </div>
           <div className="exam-question-info menu-panel">
             <QuestionList />
