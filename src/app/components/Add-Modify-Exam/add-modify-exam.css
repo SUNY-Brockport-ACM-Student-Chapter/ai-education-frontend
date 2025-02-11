@@ -34,14 +34,68 @@
     padding-right: 20px;
     background-color: beige;
 }
-.add-exam-third-row {}
+.add-exam-question textarea{
+    width: 100%;
+    background-color: var(--font-colorL);
+    color: var(--font-colorD);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: var(--border-radius-textbox);
+    box-sizing: border-box;
+    font-family: var(--font-default);
+}
 
-.add-exam-name {}
+.add-exam-question {
+    background-color: burlywood;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
 
-.add-exam-course {}
+.add-exam-question-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    gap: 20px;
+    height: 100%;
+    align-items: flex-start;
+}
 
-.add-exam-start-date {}
+.question-box {
+    width: 25%;
+    max-height: 100%; 
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
-.add-exam-end-date {}
+.question-box-inside {
+    display: flex;
+    max-height: 100%;
+    flex-direction: row;
+    gap: 10px; 
+    flex-grow: 1;
+}
 
-.add-exam-exam-description {}
+.question-button {
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.question-button p {
+    margin: 0;
+}
+
+.question-block {
+    width: 70%;
+    height: 100%;
+    background-color: aquamarine;
+    padding: 10px;
+    box-sizing: border-box;
+}

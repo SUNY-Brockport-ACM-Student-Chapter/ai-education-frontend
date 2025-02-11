@@ -3,16 +3,21 @@
 import React, { useState } from "react";
 import "./add-modify-exam.css";
 import Link from "next/link";
+import AddQuestionScreen from "./AddQuestionScreen";
 
 const AddExamScreen = () => {
   const [step, setStep] = useState(1);
 
   const handleNextClick = () => {
-    setStep(2); // Switch to next view
+    setStep(2);
   };
 
   const handleBackClick = () => {
-    setStep(1); // Go back to previous view
+    setStep(1);
+  };
+
+  const handleSaveClick = () => {
+    setStep(3);
   };
 
   return (
@@ -59,12 +64,20 @@ const AddExamScreen = () => {
 
       {step === 2 && (
         <div className="add-exam-question">
-          <p>heyyy</p>
+          <AddQuestionScreen />
           <div className="bottom-buttons">
             <button className="course-button green" onClick={handleBackClick}>Back</button>
-            <button className="course-button green">Submit</button>
+            <button className="course-button green" onClick={handleSaveClick}>Save and Continue</button>
           </div>
         </div>
+      )}
+
+      {step === 3 && (
+        <div>
+          <p>finished exam page</p>
+        </div>
+          
+          
       )}
     </div>
   );
