@@ -27,7 +27,7 @@ const AddExamScreen = () => {
           <div className="instructor-add-exam menu-panel">
             <div className="add-exam-first-row">
               <div className="add-exam-name">
-                <h3>Exam Name</h3>
+                <h3>Assignment Name</h3>
                 <input type="text" placeholder="Enter exam name" />
               </div>
               <div className="add-exam-course">
@@ -37,9 +37,10 @@ const AddExamScreen = () => {
             </div>
             <div className="add-exam-second-row">
               <div className="add-exam-start-date">
-                <h3>Start Date</h3>
+                <h3>Start Date </h3>
                 <input type="date" />
               </div>
+              <div className = "dash"></div>
               <div className="add-exam-end-date">
                 <h3>End Date</h3>
                 <input type="date" />
@@ -64,7 +65,11 @@ const AddExamScreen = () => {
 
       {step === 2 && (
         <div className="add-exam-question">
-          <AddQuestionScreen />
+          <AddQuestionScreen onBack={function (): void {
+            throw new Error("Function not implemented.");
+          } } onSave={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
           <div className="bottom-buttons">
             <button className="course-button green" onClick={handleBackClick}>Back</button>
             <button className="course-button green" onClick={handleSaveClick}>Save and Continue</button>
@@ -76,8 +81,6 @@ const AddExamScreen = () => {
         <div>
           <p>finished exam page</p>
         </div>
-          
-          
       )}
     </div>
   );

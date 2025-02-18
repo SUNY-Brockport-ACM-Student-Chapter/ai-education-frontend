@@ -49,7 +49,8 @@ const AddQuestionScreen: React.FC<AddQuestionScreenProps> = ({ onBack, onSave })
             />
           </div>
         </div>
-        <div className="question-box">
+        <div className="menu-panel question-box">
+          <h3>Question List</h3>
           <div className="question-box-inside">
             {questions.map((q, index) => (
               <button

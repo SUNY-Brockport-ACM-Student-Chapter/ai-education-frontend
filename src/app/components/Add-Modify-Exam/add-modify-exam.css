@@ -29,13 +29,23 @@
     padding-bottom: 20px;
 }
 
+.dash {
+    margin-top: 55px;
+    align-items: center;
+    display: inline-block;
+    width: 40px;
+    border-top: 3px solid black;
+}
+
 .bottom-buttons {
     text-align: right;
-    padding-right: 20px;
+    gap: 20px;
     background-color: beige;
 }
-.add-exam-question textarea{
+
+.add-exam-question textarea {
     width: 100%;
+    min-height: 100px;
     background-color: var(--font-colorL);
     color: var(--font-colorD);
     margin-top: 10px;
@@ -54,10 +64,14 @@
     flex-direction: column;
 }
 
+.add-exam-question h3 {
+    padding-left: 2.5%;
+    font-size: 30px;
+}
+
 .add-exam-question-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: blueviolet;
     gap: 20px;
     height: 100%;
     align-items: flex-start;
@@ -65,37 +79,41 @@
 
 .question-box {
     width: 25%;
-    max-height: 100%; 
-    background-color: blue;
+    max-width: 100%;
+    max-height: 425px;
     display: flex;
     flex-direction: column;
     padding: 10px;
     box-sizing: border-box;
 }
 
+.question-box h3 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
 .question-box-inside {
     display: flex;
-    max-height: 100%;
-    flex-direction: row;
-    gap: 10px; 
+    flex-wrap: wrap;
+    gap: 10px;
     flex-grow: 1;
+    background-color: blueviolet;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    align-content: flex-start;
 }
 
 .question-button {
-    border: 1px solid black;
-    padding: 10px;
-    cursor: pointer;
+    max-width: 100px;
     text-align: center;
-}
-
-.question-button p {
-    margin: 0;
+    flex-shrink: 0; 
+    margin: 5px;
 }
 
 .question-block {
     width: 70%;
     height: 100%;
-    background-color: aquamarine;
     padding: 10px;
     box-sizing: border-box;
 }

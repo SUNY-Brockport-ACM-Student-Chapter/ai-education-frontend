@@ -4,7 +4,7 @@ import Header from "../../../components/Nav-Header/Header";
 import AddExamScreen from "../../../components/Add-Modify-Exam/AddExamScreen";
 
 const Page: React.FC = () => {
-  const pageTitle = "Create Exam";
+  const pageTitle = "Create Assignment";
   /* Set page title here, displayed in Header */
 
   return (
