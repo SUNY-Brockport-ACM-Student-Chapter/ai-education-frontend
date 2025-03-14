@@ -1,1 +1,9 @@
-/* Add your page-specific css here.*/
+/* I literally have no idea why but if the two dashboard pages
+dont have Container here, it makes the content area like 2800px wide for no reason.
+
+No other pages need this. If you can fix this please do, I have spent literal hours
+of my life trying everything. I dont understand. */
+
+.Container {
+  width: 100%;
+}

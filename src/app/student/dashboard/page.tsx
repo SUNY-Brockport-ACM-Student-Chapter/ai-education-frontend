@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import Header from "../../components/Header";
-
-import PrevNext from "@/app/components/PrevNext";
-import CourseList from "@/app/components/DashboardCourseList";
+import Header from "../../components/Nav-Header/Header";
+import DashCourseList from "../../components/Dashboard-Sliders/DashboardExamList";
 import Link from "next/link";
 
 const Page: React.FC = () => {
@@ -15,7 +13,7 @@ const Page: React.FC = () => {
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
         {/* Add your content within the main-workspace div */}
-        <CourseList></CourseList>
+        <DashCourseList />
         <p>
           To Add: Courselist slider currently showing exams? Should be just slider for courses. Each
           card directs to a course page. Also fix course slider width to fit inside screen width.

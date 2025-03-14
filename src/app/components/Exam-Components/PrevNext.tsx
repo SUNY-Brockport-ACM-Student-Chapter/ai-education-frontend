@@ -1,16 +1,16 @@
 import React from "react";
-import "./component-style.css";
+import "./exam-components.css";
 
 const PrevNext = () => {
   return (
     <div className="prevnext-buttonbox">
-      <button className="previous">
+      <button className="previous green">
         <p>❮ Prev</p>
       </button>
-      <button className="next button-hide">
+      <button className="next green">
         <p>Next ❯</p>
       </button>
-      <button className="finish button">
+      <button className="finish button gold">
         <p>Finish</p>
       </button>
       <button className="end-review button-hide">

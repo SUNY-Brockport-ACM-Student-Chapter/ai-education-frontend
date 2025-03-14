@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useUser } from "../utils/UserContext";
-import "./component-style.css";
+import { useUser } from "../../utils/UserContext";
+import "./nav-header.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SignedIn } from "@clerk/nextjs";

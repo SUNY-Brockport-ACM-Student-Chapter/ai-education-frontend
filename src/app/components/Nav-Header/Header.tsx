@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { useUser } from "../utils/UserContext";
-import "./component-style.css";
+import { useUser } from "../../utils/UserContext";
+import "./nav-header.css";
 import { SignedIn, SignOutButton } from "@clerk/nextjs";
 import { UserButton } from "@clerk/nextjs";
 

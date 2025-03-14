@@ -1,44 +1,39 @@
-# ACM AI Education Frontend
+## EduAlly Frontend
 
-## Getting Started
+### 1. Clone the repository:
+```sh
+git clone <repository-url>
+cd <project-directory>
 
-First, clone the repository:
-
-```bash
-$CLONE_DIR_DEST="Directory where you want the source code to be"
+(You can also use GitHub desktop)
 ```
 
-```bash
-git clone https://github.com/SUNY-Brockport-ACM-Student-Chapter/ai-education-frontend $CLONE_DIR_DEST
-```
-
-Second, install dependencies:
-
-```bash
-cd $CLONE_DIR_DEST
+### 2. Install dependencies:
+```sh
 npm install
 ```
 
-Third, run the development server:
+### 3. Set up environment variables:
+Create a `.env.local` file in the project root and define the necessary variables:
+```sh
+# Clerk Authentication Keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
 
-```bash
-cd $CLONE_DIR_DEST
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+(contact Frontend Lead within the project Discord for key access)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Start the development server:
+```sh
+npm run dev
+```
+The application will be available at `http://localhost:3000`.
 
-Pages will auto-update as you edit files.
+---
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm install` – Installs dependencies
+- `npm run dev` – Starts the development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---

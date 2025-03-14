@@ -1,42 +1,41 @@
 import React from "react";
-import styles from "./page.module.css";
-import Header from "../../../components/Header";
+import "./page.module.css";
+import Header from "../../../components/Nav-Header/Header";
 import Link from "next/link";
-import PrevNext from "../../../components/PrevNext";
-import ExamPageInfoBox from "../../../components/ExamPageInfoBox";
-import ExamPageButtons from "../../../components/ExamPageButtons";
-import ExamQuestion from "../../../components/ExamQuestion";
-import QuestionList from "../../../components/QuestionList";
-import ExamAIFeedback from "../../../components/ExamAIFeedback";
+import PrevNext from "../../../components/Exam-Components/PrevNext";
+import ExamQuestion from "../../../components/Exam-Components/ExamQuestion";
+import QuestionList from "../../../components/Exam-Components/QuestionList";
+import ExamAIFeedback from "../../../components/Exam-Components/ExamAIFeedback";
 
 const Page: React.FC = () => {
-  const pageTitle = "AI Review";
+  const pageTitle = "AI Review - Exam 1";
   /* Set page title here, displayed in Header */
 
   return (
-    <div className={styles.Container}>
+    <div>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
+        <div className="question-pages">
+          <div className="exam-question-questionbox menu-panel">
+            <ExamQuestion
+              questionNum={2}
+              question="What is the difference between supervised, unsupervised, and reinforcement learning?"
+            />
+            <ExamAIFeedback
+              questionFeedback="Your response is on the right track, but try to focus more on what makes each type of learning distinct. Think about how they handle data differently—does the model get clear answers to learn from, or does it have to find patterns on its own? Also, consider how the learning process works in each case. Refining these points will make your explanation clearer and more complete."
+              agreementToggle={false}
+            />
+          </div>
+          <div className="exam-question-info menu-panel">
+            <QuestionList />
+            <PrevNext />
+          </div>
+        </div>
         <p>
           To Add: fix layout, bring the different views into a folder inside student/exam/ai_review
           called components or views or something. Popup if attempting to exit the exam, cancel just
           closes it and continue takes you to where you clicked.
         </p>
-        {/* Add your content within the main-workspace div */}
-        {/*<PrevNext />*/}
-        {/* <ExamPageInfoBox examNum={2} courseName='CSS 101' examDesc='Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.' startDate='10/2/32' endDate='10/9/32' attemptNum={1} /> */}
-        {/* <ExamPageButtons/> */}
-        <div className="question_page1">
-          <ExamQuestion
-            questionNum={2}
-            question="Why do they call it oven when you of in the cold food of out hot eat the food?"
-          />
-          <ExamAIFeedback questionFeedback="Eat the food" agreementToggle={false} />
-        </div>
-        <div className="question_page2">
-          <QuestionList />
-          <PrevNext />
-        </div>
         <Link href="../course">Back to Course</Link>
         <Link href="./attempt_2">Begin 2nd Attempt</Link>
       </div>

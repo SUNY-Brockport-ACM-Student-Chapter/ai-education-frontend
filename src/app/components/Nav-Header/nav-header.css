@@ -1,0 +1,311 @@
+/* NavMenu */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: clamp(200px, 20vw, 350px);
+  height: 100vh;
+  background-color: var(--green-base);
+  color: var(--font-colorL);
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+.sidebar-nav .logo-section {
+  width: calc(100% - 30px);
+  margin: 9px 10px 12px 10px;
+  padding: 10px 5px;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--green-L), var(--green-base));
+  box-shadow:
+    0 5px 7px var(--shadow-color),
+    0px 1px 1px inset rgba(255, 255, 255, 0.1);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.sidebar-nav .logo-section a {
+  display: inline;
+}
+
+.sidebar-nav .menu-section {
+  width: calc(100% - 50px);
+  margin: 0;
+  padding: 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0 15px var(--shadow-color) inset,
+    0px 1px 5px rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav .settings-section {
+  width: calc(100% - 50px);
+  margin: 0;
+  padding: 0 25px 25px;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.nav-button {
+  width: 100%;
+  height: 4rem;
+  padding: 15px;
+  margin-top: 25px;
+  background-color: transparent;
+  background: var(--green-base);
+  border: 0;
+  border-radius: var(--border-radius);
+  font-family: var(--font-default);
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 30px;
+  line-height: 25px;
+  color: var(--font-colorL);
+  text-align: left;
+  text-shadow: 0 3px 3px var(--text-shadow-color);
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.nav-button:hover {
+  background: linear-gradient(to bottom, var(--green-L), var(--green-base));
+  box-shadow:
+    0 5px 7px var(--shadow-color),
+    0px 1px 1px inset rgba(255, 255, 255, 0.1);
+  transition: 0.1s;
+}
+
+.nav-button:active {
+  background: linear-gradient(to bottom, var(--green-base), var(--green-D));
+  box-shadow:
+    0 5px 7px var(--shadow-color) inset,
+    0px 1px 1px rgba(255, 255, 255, 0.1);
+  transition: 0.1s;
+}
+
+.mobile-settings-button {
+  display: none;
+}
+
+.burger-bar-dropdown {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: var(--font-colorL);
+  text-align: center;
+  display: none;
+}
+
+.burger-bar-dropdown i {
+  font-size: 3rem;
+  padding-top: 2px;
+  width: auto;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header .header-section {
+  width: auto;
+  text-wrap: nowrap;
+  margin: 25px;
+}
+
+.main-header .profile-icon {
+  align-content: center;
+  background-color: var(--sec-greenL);
+  border-radius: 100px;
+  padding: 5px;
+  width: 70px;
+  height: 70px;
+  color: var(--font-colorL);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  transition: 0.5s;
+  scale: 80%;
+}
+
+.main-header .profile-icon:hover {
+  border-radius: 5px;
+  transition: 0.5s;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px var(--text-shadow-color);
+  cursor: pointer;
+}
+
+.main-header .profile-text {
+  justify-self: flex-end;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 0.5rem;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.main-header .profile-section {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  transition: 0.25s;
+  margin-right: 15px;
+}
+
+/** Media Queries **/
+@media screen and (max-width: 1265px) {
+  .sidebar-nav .logo-section {
+    margin: 0;
+    width: 100%;
+    padding: 7px 25px 10px;
+  }
+
+  .nav-button {
+    text-align: center;
+    padding: 15px 15px;
+    width: 90%;
+  }
+
+  .sidebar-nav .menu-section {
+    padding: 0px 0px 25px 0px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .sidebar-nav i {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .sidebar-nav {
+    order: 1;
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    text-shadow: 0px 3px 3px var(--text-shadow-color);
+  }
+
+  .sidebar-nav i {
+    display: inline;
+  }
+
+  .sidebar-nav .logo-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    width: calc(100% - 10px);
+    max-height: 60px;
+  }
+
+  .sidebar-nav .burger-bar-dropdown,
+  .sidebar-nav .mobile-profile-icon {
+    display: block;
+    margin-inline: 35px;
+  }
+
+  .sidebar-nav .menu-section {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 45px);
+    padding: 0;
+    background-color: var(--text-shadow-color);
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    transition:
+      opacity 0.3s ease-out,
+      visibility 0.3s ease-out;
+    border-radius: 0px 0px 15px 15px;
+    align-self: center;
+    margin-top: 71px;
+    visibility: hidden;
+  }
+
+  .sidebar-nav .menu-section.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-button {
+    margin: 10px;
+    padding: 15px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  .nav-button:hover {
+    box-shadow: 0 0 15px var(--shadow-color);
+  }
+
+  .logo-section i {
+    display: block;
+  }
+
+  .sidebar-nav .settings-section {
+    display: none;
+  }
+
+  .mobile-settings-button {
+    display: block;
+  }
+
+  .burger-bar-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger-bar-dropdown input[type="checkbox"] {
+    display: none;
+  }
+
+  .main-header {
+    align-self: center;
+    justify-items: center;
+    flex-direction: row;
+    max-height: 60px;
+    margin-top: 70px;
+  }
+
+  .main-header .profile-section {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+
+  .main-header .header-section {
+    padding: 0;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content {
+    order: 2;
+    width: 100vw;
+  }
+
+  .main-workspace {
+    height: calc(100vh - 180px);
+    flex-grow: 1;
+    width: calc(100vw - 50px);
+  }
+}

@@ -1,0 +1,249 @@
+/* Course Page Layout */
+.course-page,
+.course-exams-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-nav-bar {
+  background: var(--gradient-green);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  width: 100%;
+  gap: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.course-nav-bar button {
+  background-color: transparent;
+  background: transparent;
+  color: var(--font-colorL);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  font-family: var(--font-default);
+  font-size: 1.5rem;
+  padding-inline: 20px;
+  height: 100%;
+}
+
+.course-nav-bar button:hover {
+  box-shadow: var(--box-shadow);
+  background: var(--gradient-greenL);
+}
+
+.course-nav-bar .not-selected {
+  transition: 0.25s;
+}
+
+.course-nav-bar .selected {
+  background: var(--gradient-greenD);
+  box-shadow: var(--box-shadow-pressed);
+  transition: 0.25s;
+}
+
+.course-nav-bar .selected:hover {
+  background: var(--gradient-greenD);
+  box-shadow: var(--box-shadow-pressed);
+}
+
+/* Course Home Page */
+.course-home-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.course-home-body .upcoming-exams,
+.course-home-body .course-info {
+  flex-grow: 1;
+  min-height: 400px;
+  width: auto;
+}
+
+.course-home-body .upcoming-exams {
+  min-width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .course-home-body {
+    flex-direction: column;
+  }
+
+  .course-home-body .upcoming-exams,
+  .course-home-body .course-info {
+    width: 85%;
+  }
+}
+
+/* Exam Lists */
+.exam-list,
+.student-list {
+  min-height: 350px;
+  max-height: 55vh;
+  padding-inline: var(--border-radius);
+  background: var(--gradient-grayD);
+  box-shadow: var(--box-shadow-pressed);
+  border-radius: 25px;
+  overflow-y: scroll;
+}
+
+.exam-list-body {
+  height: auto;
+}
+
+.exam-list-header,
+.student-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.exam-list-item,
+.student-list-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--font-colorL);
+  border-bottom: 1px solid var(--shadow-color);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.exam-list-item div {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+}
+
+.exam-list-item .actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Exam Cards */
+.exam-slide {
+  background-color: var(--font-colorL);
+  border-radius: var(--border-radius);
+  margin: 10px 0;
+  padding: 10px 20px;
+  width: 90%;
+  transition: 0.15s;
+}
+
+.exam-slide:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: 0.1s;
+  box-shadow: var(--box-shadow);
+}
+
+.exam-slide-box {
+  overflow-y: auto;
+  height: 375px;
+  width: 100%;
+}
+
+/* Buttons */
+button {
+  background: var(--gradient-gray);
+  border: none;
+  font-family: var(--font-default);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--font-colorD);
+  padding: 10px 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: 0.1s;
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--gradient-grayL);
+}
+
+button:active {
+  transform: translateY(1px);
+  background: var(--gradient-grayD);
+  box-shadow: var(--box-shadow-pressed);
+  text-shadow: 0 3px 3px var(--shadow-color);
+}
+
+/* Instructor & Student Role Differentiation */
+.instructor .exam-list-header div:nth-child(2),
+.student .exam-list-header div:nth-child(3) {
+  flex: 1.5;
+}
+
+.instructor .exam-list-header div:nth-child(3),
+.student .exam-list-header div:nth-child(2) {
+  flex: 0.75;
+}
+
+.instructor .exam-list-item div:nth-child(2),
+.student .exam-list-item div:nth-child(3) {
+  flex: 1.5;
+}
+
+.instructor .exam-list-item div:nth-child(3),
+.student .exam-list-item div:nth-child(2) {
+  flex: 1;
+}
+
+.instructor .exam-list-item div:nth-child(4),
+.student .exam-list-item div:nth-child(4) {
+  flex: 1.25;
+}
+
+.exam-list-item {
+  align-items: center;
+  height: 3rem;
+}
+
+.course-exams-page a,
+.course-students-page a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.exam-list-item button {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.exam-list-item .actions {
+  padding: 0px;
+}
+
+.course-action-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  margin-bottom: 15px;
+}
+
+.course-action-button {
+  font-size: 18px;
+  transition: transform 0.1s;
+}
+
+.bottom-elements-container button {
+  width: calc(100% - var(--border-radius));
+}

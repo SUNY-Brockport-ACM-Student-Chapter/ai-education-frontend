@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
-import Header from "../../components/Header";
+import Header from "../../components/Nav-Header/Header";
 import Link from "next/link";
+import DashCourseList from "../../components/Dashboard-Sliders/DashboardExamList";
 
 const Page: React.FC = () => {
   const pageTitle = "Dashboard";
@@ -11,6 +12,7 @@ const Page: React.FC = () => {
     <div className={styles.Container}>
       <Header pageTitle={pageTitle} />
       <div className="main-workspace">
+        <DashCourseList />
         {/* Add your content within the main-workspace div */}
         <p>
           FOR ALL PAGES: Remember to provide buttons to return to the previous page, or to dashboard

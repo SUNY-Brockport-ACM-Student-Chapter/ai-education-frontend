@@ -1,5 +1,5 @@
 import React from "react";
-import "./component-style.css";
+import "./exam-components.css";
 
 const qcardCompletionF = "—";
 const qcardCompletionT = "✔";
@@ -46,46 +46,6 @@ const QuestionList = () => {
         </div>
         <div className="qcard">
           12
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
-          <div className="qcardCompletionbox">{qcardCompletionF}</div>
-        </div>{" "}
-        <div className="qcard">
-          13
           <div className="qcardCompletionbox">{qcardCompletionF}</div>
         </div>
       </div>

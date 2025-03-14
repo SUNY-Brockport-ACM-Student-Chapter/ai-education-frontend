@@ -1,5 +1,5 @@
 import React from "react";
-import "./component-style.css";
+import "./exam-components.css";
 
 interface ExamQuestionProps {
   questionNum: number;
