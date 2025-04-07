@@ -17,6 +17,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "axios": "^1.8.4",
     "next": "^14.2.15",
     "react": "^18",
     "react-dom": "^18",
@@ -24,13 +25,14 @@
     "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.17.28",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5"
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
